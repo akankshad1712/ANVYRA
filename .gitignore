@@ -1,0 +1,56 @@
+# ─── Secrets & Environment ───────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+documentation/.env.sample
+*.pem
+*.key
+*.p12
+*.jks
+
+# ─── Frontend (Next.js) ──────────────────────────────────────────────────────
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.turbo/
+frontend/.vercel/
+frontend/coverage/
+
+# ─── Backend (Java / Maven) ──────────────────────────────────────────────────
+backend/target/
+backend/*.class
+backend/**/*.class
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.eclipse/
+*.swp
+*.swo
+*.orig
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# ─── Logs ────────────────────────────────────────────────────────────────────
+*.log
+*.log.*
+*npm-debug.log*
+*yarn-debug.log*
+*yarn-error.log*
+backend/build-output.log
+
+# ─── Lock files generated outside this repo ──────────────────────────────────
+# (keep package-lock.json and pom.xml, they are source files)
+
+# ─── Misc ────────────────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.lck
+*.LCK
+*~
