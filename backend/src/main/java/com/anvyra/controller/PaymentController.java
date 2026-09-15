@@ -63,10 +63,13 @@ public class PaymentController {
 
     /**
      * Webhook/callback to update payment status after gateway confirmation.
-     * In production, this should verify a webhook signature from your gateway.
-     * Required env config: payment gateway credentials.
+     * ⚠️  Production: must verify gateway webhook signature (HMAC/RSA) before processing.
+     * Required env config: RAZORPAY_KEY_SECRET or STRIPE_WEBHOOK_SECRET.
+     * This endpoint is restricted to ADMIN role until a proper gateway signature
+     * verification mechanism is in place.
      */
     @PostMapping("/webhook/confirm")
+    @org.springframework.security.access.prepost.PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Map<String, String>> confirmPayment(
             @RequestParam String transactionId,
             @RequestParam String orderId,

@@ -18,12 +18,12 @@ export default function FeaturedProducts() {
   const products = data?.content ?? [];
 
   return (
-    <section className="py-20 lg:py-28">
+    <section className="py-20 lg:py-28 bg-[#F7F3EE]">
       <Container>
         <SectionTitle
           eyebrow="Curated Selection"
           title="Featured Products"
-          subtitle="Handpicked pieces that define premium streetwear"
+          subtitle="Handpicked pieces that define premium style"
           className="mb-12"
         />
 
@@ -40,7 +40,7 @@ export default function FeaturedProducts() {
             <div className="mt-12 text-center">
               <Link
                 href="/shop"
-                className="inline-flex items-center gap-2 rounded-full bg-black px-8 py-4 font-semibold text-white transition hover:bg-zinc-800"
+                className="inline-flex items-center gap-2 rounded-full bg-[#5C2E1A] px-8 py-4 font-semibold text-[#F7F3EE] transition hover:bg-[#3D1A0A]"
               >
                 View All Products
                 <ArrowRight className="h-4 w-4" />

@@ -40,4 +40,30 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("SELECT p FROM Product p WHERE p.featured = true AND p.active = true ORDER BY p.averageRating DESC")
     Page<Product> findBestSellers(Pageable pageable);
+
+    // ─── Admin helpers ────────────────────────────────────────────────────────
+
+    /** All products regardless of active status — for admin */
+    @Query("""
+        SELECT p FROM Product p
+        WHERE (:active IS NULL OR p.active = :active)
+        AND (:categoryId IS NULL OR p.category.id = :categoryId)
+        AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', :search, '%'))
+             OR LOWER(p.brand) LIKE LOWER(CONCAT('%', :search, '%')))
+        """)
+    Page<Product> findAllAdmin(
+            @Param("active") Boolean active,
+            @Param("categoryId") Long categoryId,
+            @Param("search") String search,
+            Pageable pageable
+    );
+
+    long countByActiveTrue();
+    long countByFeaturedTrueAndActiveTrue();
+
+    @Query("SELECT COUNT(p) FROM Product p WHERE p.quantity = 0")
+    long countOutOfStock();
+
+    @Query("SELECT COUNT(p) FROM Product p WHERE p.quantity > 0 AND p.quantity <= :threshold")
+    long countLowStock(@Param("threshold") int threshold);
 }

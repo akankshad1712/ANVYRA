@@ -14,4 +14,7 @@ public interface OrderService {
     OrderResponse updateStatus(Long id, OrderStatus status);
     OrderResponse cancelOrder(Long id, Long userId);
     PagedResponse<OrderResponse> getAllOrders(Pageable pageable);
+
+    /** Admin: get any order without ownership check */
+    OrderResponse getOrderByIdAdmin(Long id);
 }

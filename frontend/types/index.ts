@@ -228,3 +228,46 @@ export interface ApiError {
   timestamp: string;
   errors?: Record<string, string>;
 }
+
+// ─── Admin ───────────────────────────────────────────────────────────────────
+export interface DashboardStats {
+  totalProducts: number;
+  activeProducts: number;
+  featuredProducts: number;
+  lowStockProducts: number;
+  outOfStockProducts: number;
+  totalOrders: number;
+  pendingOrders: number;
+  confirmedOrders: number;
+  processingOrders: number;
+  shippedOrders: number;
+  deliveredOrders: number;
+  cancelledOrders: number;
+  totalRevenue: number;
+  totalCustomers: number;
+  totalCategories: number;
+  recentOrders: Order[];
+  recentUsers: User[];
+}
+
+export interface CategoryRequest {
+  name: string;
+  description?: string;
+  imageUrl?: string;
+  slug?: string;
+}
+
+export interface ProductRequest {
+  name: string;
+  description?: string;
+  brand: string;
+  price: number;
+  discountPrice?: number;
+  quantity?: number;
+  active?: boolean;
+  featured?: boolean;
+  images?: string[];
+  sizes?: string[];
+  colors?: string[];
+  categoryId?: number;
+}

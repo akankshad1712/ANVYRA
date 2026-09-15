@@ -29,35 +29,23 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
     setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
-  const toast = useCallback(
-    (opts: Omit<Toast, "id">) => {
-      const id = Math.random().toString(36).slice(2);
-      setToasts((prev) => [...prev.slice(-4), { ...opts, id }]);
-      setTimeout(() => dismiss(id), 4000);
-    },
-    [dismiss]
-  );
+  const toast = useCallback((opts: Omit<Toast, "id">) => {
+    const id = Math.random().toString(36).slice(2);
+    setToasts((prev) => [...prev.slice(-4), { ...opts, id }]);
+    setTimeout(() => dismiss(id), 4000);
+  }, [dismiss]);
 
-  const success = useCallback(
-    (title: string, description?: string) =>
-      toast({ type: "success", title, description }),
-    [toast]
-  );
-  const error = useCallback(
-    (title: string, description?: string) =>
-      toast({ type: "error", title, description }),
-    [toast]
-  );
-  const info = useCallback(
-    (title: string, description?: string) =>
-      toast({ type: "info", title, description }),
-    [toast]
-  );
+  const success = useCallback((title: string, description?: string) =>
+    toast({ type: "success", title, description }), [toast]);
+  const error = useCallback((title: string, description?: string) =>
+    toast({ type: "error", title, description }), [toast]);
+  const info = useCallback((title: string, description?: string) =>
+    toast({ type: "info", title, description }), [toast]);
 
   const icons = {
-    success: <CheckCircle className="h-5 w-5 text-emerald-400" />,
-    error: <AlertCircle className="h-5 w-5 text-red-400" />,
-    info: <Info className="h-5 w-5 text-blue-400" />,
+    success: <CheckCircle className="h-5 w-5 text-emerald-500" />,
+    error:   <AlertCircle className="h-5 w-5 text-red-500" />,
+    info:    <Info        className="h-5 w-5 text-[#C4956A]" />,
   };
 
   return (
@@ -72,18 +60,18 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               animate={{ opacity: 1, y: 0, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
               transition={{ duration: 0.2 }}
-              className="pointer-events-auto flex items-start gap-3 rounded-xl border border-zinc-800 bg-zinc-950 px-4 py-3 shadow-2xl min-w-[280px] max-w-sm"
+              className="pointer-events-auto flex items-start gap-3 rounded-xl border border-[#5C2E1A]/40 bg-[#1C0A04] px-4 py-3 shadow-2xl min-w-[280px] max-w-sm"
             >
               {icons[t.type]}
               <div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-white">{t.title}</p>
+                <p className="text-sm font-medium text-[#F7F3EE]">{t.title}</p>
                 {t.description && (
-                  <p className="mt-0.5 text-xs text-zinc-400">{t.description}</p>
+                  <p className="mt-0.5 text-xs text-[#C4956A]">{t.description}</p>
                 )}
               </div>
               <button
                 onClick={() => dismiss(t.id)}
-                className="text-zinc-500 hover:text-white transition-colors"
+                className="text-[#A0673A] hover:text-[#F7F3EE] transition-colors"
               >
                 <X className="h-4 w-4" />
               </button>

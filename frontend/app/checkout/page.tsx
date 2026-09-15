@@ -10,34 +10,33 @@ import { addressesService } from "@/services/addresses.service";
 import { ordersService } from "@/services/orders.service";
 import Container from "@/components/common/Container";
 import { PageLoader, Spinner } from "@/components/common/Loading";
-import type { Address, PaymentMethod } from "@/types";
-import { CreditCard, Truck, Package, Plus, Check } from "lucide-react";
+import type { PaymentMethod } from "@/types";
+import { Package, Plus, CheckCircle } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
 const PAYMENT_METHODS: { value: PaymentMethod; label: string; desc: string }[] = [
-  { value: "COD", label: "Cash on Delivery", desc: "Pay when your order arrives" },
-  { value: "UPI", label: "UPI", desc: "Pay via UPI apps (requires gateway setup)" },
-  { value: "CARD", label: "Credit / Debit Card", desc: "Secure card payment (requires gateway setup)" },
-  { value: "NET_BANKING", label: "Net Banking", desc: "Pay via internet banking (requires gateway setup)" },
+  { value: "COD",         label: "Cash on Delivery",   desc: "Pay when your order arrives" },
+  { value: "UPI",         label: "UPI",                desc: "Pay via UPI apps (requires gateway setup)" },
+  { value: "CARD",        label: "Credit / Debit Card",desc: "Secure card payment (requires gateway setup)" },
+  { value: "NET_BANKING", label: "Net Banking",        desc: "Pay via internet banking (requires gateway setup)" },
 ];
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { cart } = useCartStore();
+  const { cart }            = useCartStore();
   const { isAuthenticated } = useAuthStore();
   const { success, error: showError } = useToast();
 
   const [selectedAddress, setSelectedAddress] = useState<number | null>(null);
-  const [paymentMethod, setPaymentMethod] = useState<PaymentMethod>("COD");
-  const [showAddAddress, setShowAddAddress] = useState(false);
+  const [paymentMethod,   setPaymentMethod]   = useState<PaymentMethod>("COD");
+  const [showAddAddress,  setShowAddAddress]  = useState(false);
   const [newAddress, setNewAddress] = useState({
-    fullName: "", phone: "", street: "", city: "", state: "", postalCode: "", country: "India", isDefault: false
+    fullName: "", phone: "", street: "", city: "", state: "",
+    postalCode: "", country: "India", isDefault: false as boolean,
   });
 
-  useEffect(() => {
-    if (!isAuthenticated) router.push("/login");
-  }, [isAuthenticated, router]);
+  useEffect(() => { if (!isAuthenticated) router.push("/login"); }, [isAuthenticated, router]);
 
   const { data: addresses = [], refetch: refetchAddresses } = useQuery({
     queryKey: ["addresses"],
@@ -53,36 +52,29 @@ export default function CheckoutPage() {
 
   const createAddressMutation = useMutation({
     mutationFn: addressesService.create,
-    onSuccess: (addr) => {
-      setSelectedAddress(addr.id);
-      setShowAddAddress(false);
-      refetchAddresses();
-    },
+    onSuccess: (addr) => { setSelectedAddress(addr.id); setShowAddAddress(false); refetchAddresses(); },
     onError: (err: any) => showError(err.message ?? "Failed to save address"),
   });
 
   const placeOrderMutation = useMutation({
     mutationFn: ordersService.placeOrder,
-    onSuccess: (order) => {
-      success("Order placed successfully!");
-      router.push(`/order-success?orderNumber=${order.orderNumber}`);
-    },
+    onSuccess: (order) => { success("Order placed!"); router.push(`/order-success?orderNumber=${order.orderNumber}`); },
     onError: (err: any) => showError(err.message ?? "Failed to place order"),
   });
 
   if (!isAuthenticated) return <PageLoader />;
 
-  const items = cart?.items ?? [];
+  const items    = cart?.items ?? [];
   const subtotal = cart?.totalAmount ?? 0;
   const shipping = subtotal >= 999 ? 0 : 99;
-  const total = subtotal + shipping;
+  const total    = subtotal + shipping;
 
   if (items.length === 0) {
     return (
-      <main className="py-20 text-center">
+      <main className="py-20 text-center bg-[#F7F3EE]">
         <Container>
-          <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
-          <Link href="/shop" className="underline text-zinc-600">Start shopping</Link>
+          <h1 className="text-2xl font-bold text-[#1C0A04] mb-4">Your cart is empty</h1>
+          <Link href="/shop" className="underline text-[#A0673A] hover:text-[#5C2E1A]">Start shopping</Link>
         </Container>
       </main>
     );
@@ -98,144 +90,133 @@ export default function CheckoutPage() {
     createAddressMutation.mutate(newAddress);
   };
 
+  const radioCard = (active: boolean) => cn(
+    "flex cursor-pointer gap-3 rounded-xl border p-4 transition-colors",
+    active ? "border-[#C4956A] bg-[#F7F3EE]" : "border-[#D6CCBF] bg-white hover:border-[#C4956A]/60"
+  );
+
+  const inputCls =
+    "w-full rounded-lg border border-[#D6CCBF] px-3 py-2 text-sm text-[#3D1A0A] focus:border-[#C4956A] focus:outline-none bg-[#F7F3EE]";
+
   return (
-    <main className="py-10">
+    <main className="py-10 bg-[#F7F3EE]">
       <Container>
-        <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold mb-8">Checkout</h1>
+        <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-[#1C0A04] mb-8">Checkout</h1>
+
         <div className="grid gap-8 lg:grid-cols-3">
-          {/* Left: Address + Payment */}
+          {/* Left */}
           <div className="lg:col-span-2 space-y-8">
             {/* Delivery address */}
-            <section className="rounded-2xl border border-zinc-100 p-6">
-              <h2 className="font-semibold text-lg mb-4">Delivery Address</h2>
+            <section className="rounded-2xl border border-[#D6CCBF] bg-white p-6">
+              <h2 className="font-semibold text-lg text-[#1C0A04] mb-4">Delivery Address</h2>
               <div className="space-y-3">
                 {addresses.map((addr) => (
-                  <label
-                    key={addr.id}
-                    className={cn(
-                      "flex cursor-pointer gap-3 rounded-xl border p-4 transition",
-                      selectedAddress === addr.id ? "border-black bg-zinc-50" : "border-zinc-200 hover:border-zinc-400"
-                    )}
-                  >
+                  <label key={addr.id} className={radioCard(selectedAddress === addr.id)}>
                     <input type="radio" name="address" value={addr.id}
                       checked={selectedAddress === addr.id}
-                      onChange={() => setSelectedAddress(addr.id)}
-                      className="mt-0.5" />
+                      onChange={() => setSelectedAddress(addr.id)} className="mt-0.5 accent-[#C4956A]" />
                     <div className="text-sm">
-                      <p className="font-medium">{addr.fullName}</p>
-                      <p className="text-zinc-600">{addr.street}{addr.street2 ? `, ${addr.street2}` : ""}</p>
-                      <p className="text-zinc-600">{addr.city}, {addr.state} {addr.postalCode}</p>
-                      <p className="text-zinc-600">{addr.country} · {addr.phone}</p>
-                      {addr.isDefault && <span className="text-xs text-emerald-600 font-medium">Default</span>}
+                      <p className="font-medium text-[#3D1A0A]">{addr.fullName}</p>
+                      <p className="text-[#A0673A]">{addr.street}</p>
+                      <p className="text-[#A0673A]">{addr.city}, {addr.state} {addr.postalCode}</p>
+                      <p className="text-[#A0673A]">{addr.country} · {addr.phone}</p>
+                      {addr.isDefault && (
+                        <span className="mt-1 inline-flex items-center gap-1 text-xs text-emerald-700 font-medium">
+                          <CheckCircle className="h-3 w-3" /> Default
+                        </span>
+                      )}
                     </div>
                   </label>
                 ))}
-                <button
-                  onClick={() => setShowAddAddress(!showAddAddress)}
-                  className="flex items-center gap-2 text-sm font-medium text-zinc-700 hover:text-black transition"
-                >
+                <button onClick={() => setShowAddAddress(!showAddAddress)}
+                  className="flex items-center gap-2 text-sm font-medium text-[#5C2E1A] hover:text-[#3D1A0A] transition-colors">
                   <Plus className="h-4 w-4" />
                   {showAddAddress ? "Cancel" : "Add new address"}
                 </button>
               </div>
 
               {showAddAddress && (
-                <form onSubmit={handleSaveAddress} className="mt-4 space-y-4 rounded-xl border border-zinc-200 p-4">
+                <form onSubmit={handleSaveAddress} className="mt-4 space-y-4 rounded-xl border border-[#D6CCBF] p-4 bg-[#F7F3EE]">
                   <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { key: "fullName", label: "Full Name", required: true },
-                      { key: "phone", label: "Phone", required: true },
-                    ].map(({ key, label, required }) => (
+                    {[{ key: "fullName", label: "Full Name" }, { key: "phone", label: "Phone" }].map(({ key, label }) => (
                       <div key={key}>
-                        <label className="block text-xs font-medium text-zinc-700 mb-1">{label}</label>
-                        <input required={required} value={(newAddress as any)[key]}
-                          onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })}
-                          className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm focus:border-black focus:outline-none" />
+                        <label className="block text-xs font-medium text-[#5C2E1A] mb-1">{label}</label>
+                        <input required value={(newAddress as any)[key]}
+                          onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })} className={inputCls} />
                       </div>
                     ))}
                   </div>
-                  {[
-                    { key: "street", label: "Street Address", required: true },
-                    { key: "city", label: "City", required: true },
-                  ].map(({ key, label, required }) => (
+                  {[{ key: "street", label: "Street" }, { key: "city", label: "City" }].map(({ key, label }) => (
                     <div key={key}>
-                      <label className="block text-xs font-medium text-zinc-700 mb-1">{label}</label>
-                      <input required={required} value={(newAddress as any)[key]}
-                        onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })}
-                        className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm focus:border-black focus:outline-none" />
+                      <label className="block text-xs font-medium text-[#5C2E1A] mb-1">{label}</label>
+                      <input required value={(newAddress as any)[key]}
+                        onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })} className={inputCls} />
                     </div>
                   ))}
                   <div className="grid grid-cols-2 gap-4">
                     {[{ key: "state", label: "State" }, { key: "postalCode", label: "Postal Code" }].map(({ key, label }) => (
                       <div key={key}>
-                        <label className="block text-xs font-medium text-zinc-700 mb-1">{label}</label>
+                        <label className="block text-xs font-medium text-[#5C2E1A] mb-1">{label}</label>
                         <input required value={(newAddress as any)[key]}
-                          onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })}
-                          className="w-full rounded-lg border border-zinc-300 px-3 py-2 text-sm focus:border-black focus:outline-none" />
+                          onChange={(e) => setNewAddress({ ...newAddress, [key]: e.target.value })} className={inputCls} />
                       </div>
                     ))}
                   </div>
                   <button type="submit" disabled={createAddressMutation.isPending}
-                    className="rounded-full bg-black px-6 py-2.5 text-sm font-semibold text-white hover:bg-zinc-800 disabled:opacity-50">
+                    className="rounded-full bg-[#5C2E1A] px-6 py-2.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] disabled:opacity-50 transition-colors">
                     {createAddressMutation.isPending ? "Saving…" : "Save Address"}
                   </button>
                 </form>
               )}
             </section>
 
-            {/* Payment method */}
-            <section className="rounded-2xl border border-zinc-100 p-6">
-              <h2 className="font-semibold text-lg mb-4">Payment Method</h2>
+            {/* Payment */}
+            <section className="rounded-2xl border border-[#D6CCBF] bg-white p-6">
+              <h2 className="font-semibold text-lg text-[#1C0A04] mb-4">Payment Method</h2>
               <div className="space-y-3">
                 {PAYMENT_METHODS.map((m) => (
-                  <label key={m.value}
-                    className={cn(
-                      "flex cursor-pointer gap-3 rounded-xl border p-4 transition",
-                      paymentMethod === m.value ? "border-black bg-zinc-50" : "border-zinc-200 hover:border-zinc-400"
-                    )}
-                  >
+                  <label key={m.value} className={radioCard(paymentMethod === m.value)}>
                     <input type="radio" name="payment" value={m.value}
                       checked={paymentMethod === m.value}
-                      onChange={() => setPaymentMethod(m.value)}
-                      className="mt-0.5" />
+                      onChange={() => setPaymentMethod(m.value)} className="mt-0.5 accent-[#C4956A]" />
                     <div>
-                      <p className="text-sm font-medium">{m.label}</p>
-                      <p className="text-xs text-zinc-500">{m.desc}</p>
+                      <p className="text-sm font-medium text-[#3D1A0A]">{m.label}</p>
+                      <p className="text-xs text-[#A0673A]">{m.desc}</p>
                     </div>
                   </label>
                 ))}
               </div>
               {paymentMethod !== "COD" && (
-                <div className="mt-4 rounded-xl bg-amber-50 border border-amber-200 p-3 text-xs text-amber-700">
-                  ⚠️ Payment gateway integration requires configuring credentials via environment variables (RAZORPAY_KEY_ID, STRIPE_SECRET_KEY). For now, please use Cash on Delivery.
+                <div className="mt-4 rounded-xl bg-amber-50 border border-amber-200 p-3 text-xs text-amber-800">
+                  ⚠️ Payment gateway integration requires configuring credentials via environment variables. For now, please use Cash on Delivery.
                 </div>
               )}
             </section>
           </div>
 
           {/* Order summary */}
-          <div className="rounded-2xl border border-zinc-100 p-6 h-fit space-y-4">
-            <h2 className="font-semibold text-lg">Order Summary</h2>
+          <div className="rounded-2xl border border-[#D6CCBF] bg-white p-6 h-fit space-y-4">
+            <h2 className="font-semibold text-lg text-[#1C0A04]">Order Summary</h2>
             <div className="space-y-3">
               {items.map((item) => (
                 <div key={item.id} className="flex justify-between text-sm">
-                  <span className="text-zinc-700 line-clamp-1 flex-1 pr-2">
-                    {item.productName} × {item.quantity}
-                  </span>
-                  <span className="font-medium whitespace-nowrap">₹{item.subtotal.toLocaleString()}</span>
+                  <span className="text-[#5C2E1A] line-clamp-1 flex-1 pr-2">{item.productName} × {item.quantity}</span>
+                  <span className="font-medium text-[#3D1A0A] whitespace-nowrap">₹{item.subtotal.toLocaleString()}</span>
                 </div>
               ))}
             </div>
-            <div className="border-t pt-4 space-y-2 text-sm">
+            <div className="border-t border-[#D6CCBF] pt-4 space-y-2 text-sm">
               <div className="flex justify-between">
-                <span className="text-zinc-600">Subtotal</span>
-                <span>₹{subtotal.toLocaleString()}</span>
+                <span className="text-[#A0673A]">Subtotal</span>
+                <span className="text-[#3D1A0A]">₹{subtotal.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-zinc-600">Shipping</span>
-                <span className={shipping === 0 ? "text-emerald-600" : ""}>{shipping === 0 ? "Free" : `₹${shipping}`}</span>
+                <span className="text-[#A0673A]">Shipping</span>
+                <span className={shipping === 0 ? "text-emerald-700" : "text-[#3D1A0A]"}>
+                  {shipping === 0 ? "Free" : `₹${shipping}`}
+                </span>
               </div>
-              <div className="flex justify-between font-bold text-base border-t pt-2">
+              <div className="flex justify-between font-bold text-base border-t border-[#D6CCBF] pt-2 text-[#1C0A04]">
                 <span>Total</span>
                 <span>₹{total.toLocaleString()}</span>
               </div>
@@ -243,14 +224,14 @@ export default function CheckoutPage() {
             <button
               onClick={handlePlaceOrder}
               disabled={placeOrderMutation.isPending || !selectedAddress}
-              className="flex w-full items-center justify-center gap-2 rounded-full bg-black py-4 font-semibold text-white hover:bg-zinc-800 disabled:opacity-50 transition"
+              className="flex w-full items-center justify-center gap-2 rounded-full bg-[#5C2E1A] py-4 font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] disabled:opacity-50 transition-colors"
             >
               {placeOrderMutation.isPending
-                ? <><Spinner size="sm" className="text-white" /> Placing Order…</>
+                ? <><Spinner size="sm" className="text-[#F7F3EE]" /> Placing Order…</>
                 : <><Package className="h-4 w-4" /> Place Order</>
               }
             </button>
-            <p className="text-xs text-center text-zinc-400">
+            <p className="text-xs text-center text-[#A0673A]">
               By placing your order, you agree to our Terms of Service.
             </p>
           </div>

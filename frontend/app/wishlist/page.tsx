@@ -8,17 +8,16 @@ import Container from "@/components/common/Container";
 import EmptyState from "@/components/common/EmptyState";
 import ProductCard from "@/components/product/ProductCard";
 import { Heart, ShoppingBag } from "lucide-react";
-import Link from "next/link";
 
 export default function WishlistPage() {
   const { items, toggle: removeItem } = useWishlistStore();
-  const { addItem } = useCartStore();
-  const { isAuthenticated } = useAuthStore();
+  const { addItem }        = useCartStore();
+  const { isAuthenticated }= useAuthStore();
   const { success, error: showError } = useToast();
 
   if (!isAuthenticated) {
     return (
-      <main className="py-20">
+      <main className="py-20 bg-[#F7F3EE]">
         <Container>
           <EmptyState
             icon={<Heart className="h-12 w-12" />}
@@ -33,7 +32,7 @@ export default function WishlistPage() {
 
   if (items.length === 0) {
     return (
-      <main className="py-20">
+      <main className="py-20 bg-[#F7F3EE]">
         <Container>
           <EmptyState
             icon={<Heart className="h-12 w-12" />}
@@ -51,27 +50,26 @@ export default function WishlistPage() {
       await addItem({ productId, quantity: 1 });
       await removeItem(productId);
       success("Moved to cart!");
-    } catch {
-      showError("Failed to move to cart");
-    }
+    } catch { showError("Failed to move to cart"); }
   };
 
   return (
-    <main className="py-10">
+    <main className="py-10 bg-[#F7F3EE]">
       <Container>
         <div className="mb-8">
-          <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold">
-            Wishlist ({items.length})
+          <h1 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-[#1C0A04]">
+            Wishlist <span className="text-[#A0673A] font-normal text-xl">({items.length})</span>
           </h1>
-          <p className="mt-1 text-zinc-500">Your saved pieces</p>
+          <p className="mt-1 text-[#A0673A]">Your saved pieces</p>
         </div>
+
         <div className="grid grid-cols-2 gap-4 sm:gap-6 md:grid-cols-3 lg:grid-cols-4">
           {items.map((product) => (
-            <div key={product.id} className="group relative">
+            <div key={product.id}>
               <ProductCard product={product} />
               <button
                 onClick={() => handleMoveToCart(product.id)}
-                className="mt-2 flex w-full items-center justify-center gap-2 rounded-full border border-zinc-300 py-2 text-xs font-medium text-zinc-700 hover:border-black hover:text-black transition"
+                className="mt-2 flex w-full items-center justify-center gap-2 rounded-full border border-[#D6CCBF] py-2 text-xs font-medium text-[#5C2E1A] hover:border-[#C4956A] hover:bg-[#EDE8E0] transition-colors"
               >
                 <ShoppingBag className="h-3.5 w-3.5" />
                 Move to Cart

@@ -191,6 +191,14 @@ public class OrderServiceImpl implements OrderService {
         return toPagedResponse(orderRepository.findAll(pageable));
     }
 
+    @Override
+    @Transactional(readOnly = true)
+    public OrderResponse getOrderByIdAdmin(Long id) {
+        Order order = orderRepository.findByIdWithItems(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Order", id));
+        return mapper.toOrderResponse(order);
+    }
+
     private void verifyOwnership(Order order, Long userId) {
         if (!order.getUser().getId().equals(userId)) {
             throw new UnauthorizedException("You don't have access to this order");

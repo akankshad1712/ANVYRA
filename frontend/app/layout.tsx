@@ -22,23 +22,23 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: {
-    default: "ANVYRA | Built For Legacy",
+    default: "ANVYRA | Style Meets You",
     template: "%s | ANVYRA",
   },
   description:
-    "Premium fashion and lifestyle brand. Luxury streetwear crafted for timeless design, premium quality and confidence.",
-  keywords: ["ANVYRA", "luxury fashion", "premium streetwear", "lifestyle brand"],
+    "ANVYRA — Style Meets You. Premium fashion and lifestyle crafted for timeless design, quality and confidence.",
+  keywords: ["ANVYRA", "luxury fashion", "premium streetwear", "lifestyle brand", "style meets you"],
   openGraph: {
-    title: "ANVYRA | Built For Legacy",
-    description: "Premium fashion and lifestyle brand.",
+    title: "ANVYRA | Style Meets You",
+    description: "Style Meets You. Premium fashion and lifestyle brand.",
     type: "website",
     locale: "en_US",
     siteName: "ANVYRA",
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANVYRA | Built For Legacy",
-    description: "Premium fashion and lifestyle brand.",
+    title: "ANVYRA | Style Meets You",
+    description: "Style Meets You. Premium fashion and lifestyle brand.",
   },
   robots: { index: true, follow: true },
 };
@@ -59,7 +59,8 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${spaceGrotesk.variable}`}
     >
-      <body className="min-h-screen bg-white text-black antialiased">
+      {/* cream background — warm luxury base */}
+      <body className="min-h-screen bg-[#F7F3EE] text-[#3D1A0A] antialiased">
         <QueryProvider>
           <ToastProvider>
             <AuthProvider>

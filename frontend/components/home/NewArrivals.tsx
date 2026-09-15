@@ -18,20 +18,15 @@ export default function NewArrivals() {
   const products = data?.content ?? [];
 
   return (
-    <section className="bg-zinc-50 py-20 lg:py-28">
+    <section className="bg-[#EDE8E0] py-20 lg:py-28">
       <Container>
         <div className="flex items-end justify-between mb-12">
-          <SectionTitle
-            eyebrow="Just Landed"
-            title="New Arrivals"
-            align="left"
-          />
+          <SectionTitle eyebrow="Just Landed" title="New Arrivals" align="left" />
           <Link
             href="/shop?sort=newest"
-            className="hidden items-center gap-2 text-sm font-semibold text-zinc-700 hover:text-zinc-950 transition sm:flex"
+            className="hidden items-center gap-2 text-sm font-semibold text-[#5C2E1A] hover:text-[#3D1A0A] transition sm:flex"
           >
-            See all
-            <ArrowRight className="h-4 w-4" />
+            See all <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 

@@ -20,4 +20,14 @@ public interface OrderRepository extends JpaRepository<Order, Long> {
     Optional<Order> findByOrderNumber(String orderNumber);
 
     Page<Order> findByStatus(OrderStatus status, Pageable pageable);
+
+    // ─── Admin helpers ────────────────────────────────────────────────────────
+
+    long countByStatus(OrderStatus status);
+
+    @Query("SELECT COALESCE(SUM(o.totalAmount), 0) FROM Order o WHERE o.status IN (com.anvyra.entity.Order.OrderStatus.DELIVERED, com.anvyra.entity.Order.OrderStatus.SHIPPED)")
+    java.math.BigDecimal sumRevenueDelivered();
+
+    @Query("SELECT o FROM Order o LEFT JOIN FETCH o.items i LEFT JOIN FETCH i.product LEFT JOIN FETCH o.user ORDER BY o.createdAt DESC")
+    java.util.List<Order> findRecentOrders(Pageable pageable);
 }
