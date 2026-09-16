@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import { productsService } from "@/services/products.service";
 import { categoriesService } from "@/services/categories.service";
 import Container from "@/components/common/Container";
@@ -14,6 +14,8 @@ import { cn } from "@/lib/utils";
 
 export default function ShopContent() {
   const searchParams = useSearchParams();
+  const router       = useRouter();
+  const pathname     = usePathname();
   const [page, setPage]           = useState(0);
   const [showFilters, setShowFilters] = useState(false);
 
@@ -77,9 +79,10 @@ export default function ShopContent() {
             <select
               defaultValue={sortParam ?? "newest"}
               onChange={(e) => {
-                const url = new URL(window.location.href);
-                url.searchParams.set("sort", e.target.value);
-                window.location.href = url.toString();
+                // Build URL from current searchParams — no window.location needed
+                const params = new URLSearchParams(searchParams.toString());
+                params.set("sort", e.target.value);
+                router.push(`${pathname}?${params.toString()}`);
               }}
               className="rounded-lg border border-[#D6CCBF] bg-white px-3 py-2 text-sm text-[#5C2E1A] focus:border-[#C4956A] focus:outline-none"
             >
@@ -135,15 +138,17 @@ export default function ShopContent() {
                   ].map((range) => {
                     const isActive = String(minPrice ?? "") === String(range.min ?? "") &&
                                      String(maxPrice ?? "") === String(range.max ?? "");
-                    const href = (() => {
-                      const url = new URL(window.location.href);
-                      if (range.min) url.searchParams.set("minPrice", String(range.min));
-                      else url.searchParams.delete("minPrice");
-                      if (range.max) url.searchParams.set("maxPrice", String(range.max));
-                      else url.searchParams.delete("maxPrice");
-                      return url.pathname + url.search;
-                    })();
-                    return <a key={range.label} href={isActive ? "/shop" : href} className={filterBtnCls(isActive)}>{range.label}</a>;
+
+                    // Build href from current searchParams (SSR-safe — no window.location)
+                    const params = new URLSearchParams();
+                    if (categoryId)      params.set("categoryId", categoryId);
+                    if (q)               params.set("q", q);
+                    if (sortParam)       params.set("sort", sortParam);
+                    if (range.min != null) params.set("minPrice", String(range.min));
+                    if (range.max != null) params.set("maxPrice", String(range.max));
+                    const href = isActive ? "/shop" : `/shop?${params.toString()}`;
+
+                    return <a key={range.label} href={href} className={filterBtnCls(isActive)}>{range.label}</a>;
                   })}
                 </div>
               </div>
