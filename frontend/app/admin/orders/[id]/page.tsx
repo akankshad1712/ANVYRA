@@ -11,6 +11,7 @@ import { ArrowLeft, MapPin } from "lucide-react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import type { OrderStatus } from "@/types";
+import { DEFAULT_FALLBACK } from "@/lib/product-images";
 
 const ALL_STATUSES: OrderStatus[] = [
   "PENDING", "CONFIRMED", "PROCESSING", "SHIPPED", "DELIVERED", "CANCELLED"
@@ -111,6 +112,9 @@ export default function AdminOrderDetailPage({ params }: { params: Promise<{ id:
                   <div className="relative h-16 w-14 flex-shrink-0 rounded-lg overflow-hidden bg-[#EDE8E0]">
                     {item.productImage && (
                       <Image src={item.productImage} alt={item.productName} fill className="object-cover" />
+                    )}
+                    {!item.productImage && (
+                      <Image src={DEFAULT_FALLBACK} alt={item.productName} fill className="object-cover" />
                     )}
                   </div>
                   <div className="flex-1 min-w-0">

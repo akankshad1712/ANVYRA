@@ -11,6 +11,7 @@ import { useAuthStore } from "@/store/auth.store";
 import { useToast } from "@/providers/toast-provider";
 import type { Product } from "@/types";
 import { cn } from "@/lib/utils";
+import { resolveProductImage, resolveProductGallery } from "@/lib/product-images";
 
 interface ProductCardProps {
   product: Product;
@@ -25,7 +26,12 @@ export default function ProductCard({ product, priority = false }: ProductCardPr
   const { success, error: showError } = useToast();
 
   const inWishlist = isInWishlist(product.id);
-  const mainImage  = product.images?.[0] ?? "/placeholder-product.jpg";
+  const mainImage  = resolveProductImage(
+    product.images,
+    product.name,
+    product.category?.name,
+    product.colors
+  );
   const hasDiscount= product.discountPrice > 0 && product.discountPrice < product.price;
   const discountPct= hasDiscount
     ? Math.round(((product.price - product.discountPrice) / product.price) * 100)

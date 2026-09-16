@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative h-screen min-h-[600px] overflow-hidden">
       {/* Background image */}
       <Image
-        src="/hero/hero-desktop.jpg"
+        src="/hero/hero-desktop.png"
         alt="ANVYRA — Style Meets You"
         fill
         priority

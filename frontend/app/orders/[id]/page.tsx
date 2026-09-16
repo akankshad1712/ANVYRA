@@ -12,6 +12,7 @@ import Link from "next/link";
 import { ArrowLeft, MapPin } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { OrderStatus } from "@/types";
+import { DEFAULT_FALLBACK } from "@/lib/product-images";
 
 const STATUS_STYLES: Record<OrderStatus, string> = {
   PENDING:    "bg-amber-100 text-amber-800",
@@ -81,6 +82,9 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                 <div className="relative h-20 w-16 rounded-lg overflow-hidden bg-[#EDE8E0] flex-shrink-0">
                   {item.productImage && (
                     <Image src={item.productImage} alt={item.productName} fill className="object-cover" />
+                  )}
+                  {!item.productImage && (
+                    <Image src={DEFAULT_FALLBACK} alt={item.productName} fill className="object-cover" />
                   )}
                 </div>
                 <div className="flex-1 min-w-0">

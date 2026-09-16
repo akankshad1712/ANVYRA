@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Search, Boxes, ChevronLeft, ChevronRight, Pencil } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { resolveProductImage } from "@/lib/product-images";
 
 export default function AdminInventoryPage() {
   const [search, setSearch] = useState("");
@@ -112,7 +113,12 @@ export default function AdminInventoryPage() {
                       <td className="px-4 py-3">
                         <div className="flex items-center gap-3">
                           <div className="relative h-10 w-10 flex-shrink-0 overflow-hidden rounded-lg bg-[#EDE8E0]">
-                            {p.images?.[0] && <Image src={p.images[0]} alt={p.name} fill className="object-cover" />}
+                            <Image
+                              src={resolveProductImage(p.images, p.name, p.category?.name, p.colors)}
+                              alt={p.name}
+                              fill
+                              className="object-cover"
+                            />
                           </div>
                           <div>
                             <p className="font-medium text-[#3D1A0A] line-clamp-1">{p.name}</p>

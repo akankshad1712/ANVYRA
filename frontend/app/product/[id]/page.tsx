@@ -14,6 +14,7 @@ import { Heart, ShoppingBag, Star, Truck, RotateCcw, Shield } from "lucide-react
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { resolveProductGallery } from "@/lib/product-images";
 
 export default function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);
@@ -47,7 +48,12 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
     </main>
   );
 
-  const images     = product.images?.length ? product.images : ["/placeholder-product.jpg"];
+  const images     = resolveProductGallery(
+    product.images,
+    product.name,
+    product.category?.name,
+    product.colors
+  );
   const inWishlist = isInWishlist(product.id);
   const hasDiscount= product.discountPrice > 0 && product.discountPrice < product.price;
   const discountPct= hasDiscount

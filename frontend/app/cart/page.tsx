@@ -7,6 +7,7 @@ import EmptyState from "@/components/common/EmptyState";
 import Link from "next/link";
 import Image from "next/image";
 import { Minus, Plus, X, ShoppingBag, Truck } from "lucide-react";
+import { DEFAULT_FALLBACK } from "@/lib/product-images";
 
 export default function CartPage() {
   const { cart, updateQuantity, removeItem, isLoading } = useCartStore();
@@ -58,6 +59,9 @@ export default function CartPage() {
                 <div className="relative h-28 w-24 flex-shrink-0 overflow-hidden rounded-xl bg-[#EDE8E0]">
                   {item.productImage && (
                     <Image src={item.productImage} alt={item.productName} fill className="object-cover" />
+                  )}
+                  {!item.productImage && (
+                    <Image src={DEFAULT_FALLBACK} alt={item.productName} fill className="object-cover" />
                   )}
                 </div>
                 <div className="flex flex-1 flex-col gap-2">

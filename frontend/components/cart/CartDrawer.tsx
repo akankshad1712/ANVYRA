@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useToast } from "@/providers/toast-provider";
 import { Spinner } from "@/components/common/Loading";
+import { DEFAULT_FALLBACK } from "@/lib/product-images";
 
 export default function CartDrawer() {
   const { cart, isOpen, closeCart, updateQuantity, removeItem, isLoading } = useCartStore();
@@ -80,7 +81,9 @@ export default function CartDrawer() {
                           <Image src={item.productImage} alt={item.productName} fill className="object-cover" />
                         </div>
                       ) : (
-                        <div className="h-24 w-20 flex-shrink-0 rounded-lg bg-[#EDE8E0]" />
+                        <div className="relative h-24 w-20 flex-shrink-0 overflow-hidden rounded-lg bg-[#EDE8E0]">
+                          <Image src={DEFAULT_FALLBACK} alt={item.productName} fill className="object-cover" />
+                        </div>
                       )}
                       <div className="flex flex-1 flex-col">
                         <div className="flex justify-between">
