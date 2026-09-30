@@ -19,7 +19,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     long countByRole(UserRole role);
 
-    @Query("SELECT u FROM User u WHERE u.role = com.anvyra.entity.UserRole.CUSTOMER AND (:search IS NULL OR LOWER(u.email) LIKE LOWER(CONCAT('%', :search, '%')) OR LOWER(u.firstName) LIKE LOWER(CONCAT('%', :search, '%')) OR LOWER(u.lastName) LIKE LOWER(CONCAT('%', :search, '%')))")
+    @Query("SELECT u FROM User u WHERE u.role = com.anvyra.entity.UserRole.CUSTOMER AND (:search IS NULL OR LOWER(u.email) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%')) OR LOWER(u.firstName) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%')) OR LOWER(u.lastName) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%')))")
     Page<User> findCustomers(@org.springframework.data.repository.query.Param("search") String search, Pageable pageable);
 
     @Query("SELECT u FROM User u ORDER BY u.createdAt DESC")

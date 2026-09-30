@@ -4,22 +4,18 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter, usePathname } from "next/navigation";
-import {
-  Search, Heart, ShoppingBag, User, Menu, X, ChevronDown
-} from "lucide-react";
+import { Search, Heart, ShoppingBag, User, Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
 import { useAuthStore } from "@/store/auth.store";
 import { useCartStore } from "@/store/cart.store";
 import { useWishlistStore } from "@/store/wishlist.store";
+import { categoriesService } from "@/services/categories.service";
 import { cn } from "@/lib/utils";
 
-const NAV_LINKS = [
-  { label: "Men",        href: "/shop?category=men",         sub: ["T-Shirts", "Hoodies", "Trousers", "Jackets"] },
-  { label: "Women",      href: "/shop?category=women",       sub: ["Tops", "Dresses", "Trousers", "Outerwear"] },
-  { label: "Shoes",      href: "/shop?category=shoes",       sub: [] },
-  { label: "Oversized",  href: "/shop?category=oversized",   sub: [] },
-  { label: "Accessories",href: "/shop?category=accessories", sub: [] },
-  { label: "Collections",href: "/shop",                      sub: [] },
+// Static nav structure — category links built dynamically from DB below
+const STATIC_NAV = [
+  { label: "Collections", href: "/shop", sub: [] as string[] },
 ];
 
 export default function Navbar() {
@@ -28,6 +24,7 @@ export default function Navbar() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQ, setSearchQ]       = useState("");
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
+  const [mounted, setMounted]       = useState(false);
   const searchRef = useRef<HTMLInputElement>(null);
   const router    = useRouter();
   const pathname  = usePathname();
@@ -36,8 +33,30 @@ export default function Navbar() {
   const { cart, toggleCart }              = useCartStore();
   const { items: wishlistItems }          = useWishlistStore();
 
-  const cartCount     = cart?.totalItems ?? 0;
-  const wishlistCount = wishlistItems.length;
+  const cartCount     = mounted ? (cart?.totalItems ?? 0) : 0;
+  const wishlistCount = mounted ? wishlistItems.length : 0;
+
+  // Load real categories from API so links use correct ?categoryId=
+  const { data: categories = [] } = useQuery({
+    queryKey: ["categories"],
+    queryFn: categoriesService.getAll,
+    staleTime: 5 * 60 * 1000, // 5 min cache
+  });
+
+  // Build nav links: real DB categories first, then static
+  // Only after mount to avoid hydration mismatch (categories come from API)
+  const navLinks = mounted
+    ? [
+        ...categories.map((cat) => ({
+          label: cat.name,
+          href: `/shop?categoryId=${cat.id}`,
+          sub: [] as string[],
+        })),
+        ...STATIC_NAV,
+      ]
+    : STATIC_NAV;
+
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -62,10 +81,14 @@ export default function Navbar() {
   const isHomePage  = pathname === "/";
   const transparent = isHomePage && !scrolled && !mobileOpen;
 
-  /* ─ colour helpers ─ */
   const iconCls = transparent
     ? "text-white/90 hover:text-white hover:bg-white/10"
     : "text-[#5C2E1A] hover:text-[#3D1A0A] hover:bg-[#EDE8E0]";
+
+  const linkCls = cn(
+    "flex items-center gap-1 text-sm font-medium transition-colors",
+    transparent ? "text-white/90 hover:text-white" : "text-[#5C2E1A] hover:text-[#3D1A0A]"
+  );
 
   return (
     <>
@@ -77,7 +100,7 @@ export default function Navbar() {
             : "border-b border-[#D6CCBF] bg-[#F7F3EE] shadow-sm"
         )}
       >
-        {/* ── Search overlay ─────────────────────────────────────── */}
+        {/* ── Search overlay ─────────────────────────────── */}
         <AnimatePresence>
           {searchOpen && (
             <motion.div
@@ -116,57 +139,35 @@ export default function Navbar() {
           )}
         </AnimatePresence>
 
-        {/* ── Main nav row ───────────────────────────────────────── */}
+        {/* ── Main nav row ───────────────────────────────── */}
         <nav className="mx-auto flex h-18 max-w-7xl items-center justify-between px-4 sm:px-6 py-4">
 
           {/* Logo */}
           <Link href="/" aria-label="ANVYRA – home">
-            {transparent ? (
-              /* White logo on dark hero overlay */
-              <Image
-                src="/logos/anvyra-logo-white.png"
-                alt="ANVYRA"
-                width={130}
-                height={40}
-                className="h-9 w-auto object-contain"
-                priority
-              />
-            ) : (
-              /* Black logo on cream navbar */
-              <Image
-                src="/logos/anvyra-logo-black.png"
-                alt="ANVYRA"
-                width={130}
-                height={40}
-                className="h-9 w-auto object-contain"
-                priority
-              />
-            )}
+            <Image
+              src={transparent ? "/logos/anvyra-logo-white.png" : "/logos/anvyra-logo-black.png"}
+              alt="ANVYRA"
+              width={130}
+              height={40}
+              className="h-9 w-auto object-contain"
+              priority
+            />
           </Link>
 
-          {/* ── Desktop links ─────────────────────────────────── */}
-          <div className="hidden items-center gap-8 lg:flex">
-            {NAV_LINKS.map((link) => (
+          {/* ── Desktop links ──────────────────────────── */}
+          <div className="hidden items-center gap-6 lg:flex overflow-x-auto max-w-2xl">
+            {navLinks.map((link) => (
               <div
                 key={link.label}
-                className="relative"
+                className="relative flex-shrink-0"
                 onMouseEnter={() => link.sub.length > 0 && setActiveMenu(link.label)}
                 onMouseLeave={() => setActiveMenu(null)}
               >
-                <Link
-                  href={link.href}
-                  className={cn(
-                    "flex items-center gap-1 text-sm font-medium transition-colors",
-                    transparent
-                      ? "text-white/90 hover:text-white"
-                      : "text-[#5C2E1A] hover:text-[#3D1A0A]"
-                  )}
-                >
+                <Link href={link.href} className={linkCls}>
                   {link.label}
                   {link.sub.length > 0 && <ChevronDown className="h-3.5 w-3.5 opacity-60" />}
                 </Link>
 
-                {/* Dropdown */}
                 <AnimatePresence>
                   {activeMenu === link.label && link.sub.length > 0 && (
                     <motion.div
@@ -179,7 +180,7 @@ export default function Navbar() {
                       {link.sub.map((sub) => (
                         <Link
                           key={sub}
-                          href={`${link.href}&subcategory=${sub.toLowerCase()}`}
+                          href={`${link.href}&q=${sub.toLowerCase()}`}
                           className="block rounded-lg px-4 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0] hover:text-[#3D1A0A] transition-colors"
                         >
                           {sub}
@@ -192,7 +193,7 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* ── Icon row ──────────────────────────────────────── */}
+          {/* ── Icon row ───────────────────────────────── */}
           <div className="flex items-center gap-1">
             {/* Search */}
             <button
@@ -218,27 +219,31 @@ export default function Navbar() {
             </Link>
 
             {/* Account */}
-            {isAuthenticated ? (
+            {mounted && isAuthenticated ? (
               <div className="relative group">
-                <button
-                  aria-label="Account"
-                  className={cn("rounded-full p-2 transition-colors", iconCls)}
-                >
+                <button aria-label="Account" className={cn("rounded-full p-2 transition-colors", iconCls)}>
                   <User className="h-5 w-5" />
                 </button>
-                {/* Account dropdown */}
-                <div className="absolute right-0 top-full mt-1 hidden w-52 rounded-xl border border-[#D6CCBF] bg-[#F7F3EE] p-2 shadow-xl group-hover:block">
-                  <p className="px-3 py-1.5 text-xs text-[#A0673A] truncate">
-                    {user?.firstName} {user?.lastName}
-                  </p>
-                  <hr className="my-1 border-[#E6DFD5]" />
-                  <Link href="/account" className="block rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0]">My Account</Link>
-                  <Link href="/orders"  className="block rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0]">Orders</Link>
-                  <Link href="/wishlist"className="block rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0]">Wishlist</Link>
+                <div className="absolute right-0 top-full mt-1 hidden w-52 rounded-xl border border-[#D6CCBF] bg-[#F7F3EE] p-2 shadow-xl group-hover:block z-50">
+                  <div className="px-3 py-2 border-b border-[#EDE8E0] mb-1">
+                    <p className="text-xs font-semibold text-[#3D1A0A] truncate">
+                      {user?.firstName} {user?.lastName}
+                    </p>
+                    <p className="text-[10px] text-[#A0673A] truncate">{user?.email}</p>
+                  </div>
+                  <Link href="/account"  className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0] transition-colors">
+                    <User className="h-3.5 w-3.5" /> My Account
+                  </Link>
+                  <Link href="/orders"   className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0] transition-colors">
+                    <ShoppingBag className="h-3.5 w-3.5" /> Orders
+                  </Link>
+                  <Link href="/wishlist" className="flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#5C2E1A] hover:bg-[#EDE8E0] transition-colors">
+                    <Heart className="h-3.5 w-3.5" /> Wishlist
+                  </Link>
                   <hr className="my-1 border-[#E6DFD5]" />
                   <button
                     onClick={handleLogout}
-                    className="block w-full rounded-lg px-3 py-2 text-left text-sm text-red-700 hover:bg-red-50"
+                    className="w-full rounded-lg px-3 py-2 text-left text-sm text-red-600 hover:bg-red-50 transition-colors"
                   >
                     Sign out
                   </button>
@@ -275,7 +280,7 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* ── Mobile nav drawer ──────────────────────────────────── */}
+        {/* ── Mobile nav drawer ──────────────────────────── */}
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
@@ -286,18 +291,11 @@ export default function Navbar() {
               className="overflow-hidden border-t border-[#5C2E1A]/30 bg-[#1C0A04] lg:hidden"
             >
               <div className="px-6 py-6 space-y-1">
-                {/* Mobile logo */}
                 <div className="pb-4 flex justify-center">
-                  <Image
-                    src="/logos/anvyra-logo-white.png"
-                    alt="ANVYRA"
-                    width={110}
-                    height={34}
-                    className="h-8 w-auto object-contain"
-                  />
+                  <Image src="/logos/anvyra-logo-white.png" alt="ANVYRA" width={110} height={34} className="h-8 w-auto object-contain" />
                 </div>
 
-                {NAV_LINKS.map((link) => (
+                {navLinks.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
@@ -308,21 +306,20 @@ export default function Navbar() {
                 ))}
 
                 <div className="pt-4 border-t border-[#5C2E1A]/40 space-y-1">
-                  {isAuthenticated ? (
+                  {mounted && isAuthenticated ? (
                     <>
-                      <Link href="/account" className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A]">My Account</Link>
-                      <Link href="/orders"  className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A]">Orders</Link>
-                      <button onClick={handleLogout} className="block w-full rounded-lg px-4 py-3 text-left text-base text-red-400 hover:bg-[#3D1A0A]">Sign out</button>
+                      <Link href="/account" className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors">My Account</Link>
+                      <Link href="/orders"  className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors">Orders</Link>
+                      <button onClick={handleLogout} className="block w-full rounded-lg px-4 py-3 text-left text-base text-red-400 hover:bg-[#3D1A0A] transition-colors">Sign out</button>
                     </>
                   ) : (
                     <>
-                      <Link href="/login"    className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A]">Sign in</Link>
-                      <Link href="/register" className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A]">Create account</Link>
+                      <Link href="/login"    className="block rounded-lg px-4 py-3 text-base font-semibold text-[#C4956A] hover:bg-[#3D1A0A] transition-colors">Sign in</Link>
+                      <Link href="/register" className="block rounded-lg px-4 py-3 text-base text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors">Create account</Link>
                     </>
                   )}
                 </div>
 
-                {/* Tagline */}
                 <p className="pt-6 text-center text-xs tracking-[0.2em] text-[#C4956A] uppercase">
                   Style Meets You
                 </p>

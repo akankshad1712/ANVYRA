@@ -23,9 +23,9 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
         AND (:categoryId IS NULL OR p.category.id = :categoryId)
         AND (:minPrice IS NULL OR p.price >= :minPrice)
         AND (:maxPrice IS NULL OR p.price <= :maxPrice)
-        AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', :search, '%'))
-             OR LOWER(p.brand) LIKE LOWER(CONCAT('%', :search, '%'))
-             OR LOWER(p.description) LIKE LOWER(CONCAT('%', :search, '%')))
+        AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%'))
+             OR LOWER(p.brand) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%'))
+             OR LOWER(p.description) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%')))
         """)
     Page<Product> searchProducts(
             @Param("categoryId") Long categoryId,
@@ -48,8 +48,8 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
         SELECT p FROM Product p
         WHERE (:active IS NULL OR p.active = :active)
         AND (:categoryId IS NULL OR p.category.id = :categoryId)
-        AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', :search, '%'))
-             OR LOWER(p.brand) LIKE LOWER(CONCAT('%', :search, '%')))
+        AND (:search IS NULL OR LOWER(p.name) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%'))
+             OR LOWER(p.brand) LIKE LOWER(CONCAT('%', CAST(:search AS string), '%')))
         """)
     Page<Product> findAllAdmin(
             @Param("active") Boolean active,

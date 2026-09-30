@@ -141,13 +141,12 @@ export default function CartDrawer() {
                   <div className="flex justify-between border-t border-[#D6CCBF] pt-2 text-base font-semibold text-[#3D1A0A]">
                     <span>Total</span>
                     <span>₹{total.toLocaleString()}</span>
-                  </div>
+                  </div>         
                 </div>
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="flex w-full items-center justify-center rounded-full bg-[#5C2E1A] px-6 py-3.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors"
-                >
+                  className="flex w-full items-center justify-center rounded-full bg-[#5C2E1A] px-6 py-3.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors">
                   {isLoading ? <Spinner size="sm" className="text-[#F7F3EE]" /> : "Checkout"}
                 </Link>
                 <Link

@@ -25,9 +25,8 @@ export default function FadeIn({
     ...(direction === "left" && { x: 24 }),
     ...(direction === "right" && { x: -24 }),
   };
-
   return (
-    <motion.div
+    <motion.div 
       initial={initial}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
@@ -38,3 +37,4 @@ export default function FadeIn({
     </motion.div>
   );
 }
+

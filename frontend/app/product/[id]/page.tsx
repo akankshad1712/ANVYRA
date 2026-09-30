@@ -151,7 +151,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 <span className="text-xl text-[#A0673A]/60 line-through">₹{product.price.toLocaleString()}</span>
               )}
             </div>
-
+            
             {/* Sizes */}
             {product.sizes?.length > 0 && (
               <div>

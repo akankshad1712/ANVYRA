@@ -103,8 +103,12 @@ async function handleResponse<T>(res: Response): Promise<T> {
   const data = text ? JSON.parse(text) : undefined;
 
   if (!res.ok) {
-    const message =
-      data?.message ?? `Request failed with status ${res.status}`;
+    // If backend returned field-level validation errors, build a readable message
+    let message = data?.message ?? `Request failed with status ${res.status}`;
+    if (data?.errors && typeof data.errors === "object") {
+      const fieldMessages = Object.values(data.errors as Record<string, string>).join(" · ");
+      if (fieldMessages) message = fieldMessages;
+    }
     throw new ApiError(res.status, message, data?.errors);
   }
 

@@ -59,21 +59,21 @@ public class Product {
     @Column(nullable = false)
     private Boolean featured = false;
 
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "product_images", joinColumns = @JoinColumn(name = "product_id"))
     @Column(name = "image_url", length = 500)
     @Builder.Default
     private List<String> images = new ArrayList<>();
 
     // Sizes available: XS, S, M, L, XL, XXL
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "product_sizes", joinColumns = @JoinColumn(name = "product_id"))
     @Column(name = "size", length = 10)
     @Builder.Default
     private List<String> sizes = new ArrayList<>();
 
     // Colors: stored as hex or color name
-    @ElementCollection
+    @ElementCollection(fetch = FetchType.EAGER)
     @CollectionTable(name = "product_colors", joinColumns = @JoinColumn(name = "product_id"))
     @Column(name = "color", length = 50)
     @Builder.Default

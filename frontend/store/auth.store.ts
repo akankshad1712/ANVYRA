@@ -6,6 +6,20 @@ import type { User } from "@/types";
 import { tokenStorage } from "@/lib/api-client";
 import { authService } from "@/services/auth.service";
 
+// ── Cookie helpers for middleware route protection ────────────────────────────
+const AUTH_COOKIE = "anvyra_authed";
+
+function setAuthCookie() {
+  if (typeof document === "undefined") return;
+  // Session cookie — cleared when browser closes
+  document.cookie = `${AUTH_COOKIE}=1; path=/; SameSite=Lax`;
+}
+
+function clearAuthCookie() {
+  if (typeof document === "undefined") return;
+  document.cookie = `${AUTH_COOKIE}=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT`;
+}
+
 interface AuthState {
   user: User | null;
   isAuthenticated: boolean;
@@ -26,7 +40,7 @@ interface AuthState {
 
 export const useAuthStore = create<AuthState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       user: null,
       isAuthenticated: false,
       isLoading: false,
@@ -39,10 +53,13 @@ export const useAuthStore = create<AuthState>()(
           const res = await authService.login({ email, password });
           tokenStorage.set(res.accessToken, res.refreshToken);
           const user = await authService.me();
+          setAuthCookie();
           set({ user, isAuthenticated: true });
-        } finally {
+        } catch (err) {
           set({ isLoading: false });
+          throw err; // re-throw so the login page can catch and show the error
         }
+        set({ isLoading: false });
       },
 
       register: async (data) => {
@@ -51,10 +68,13 @@ export const useAuthStore = create<AuthState>()(
           const res = await authService.register(data);
           tokenStorage.set(res.accessToken, res.refreshToken);
           const user = await authService.me();
+          setAuthCookie();
           set({ user, isAuthenticated: true });
-        } finally {
+        } catch (err) {
           set({ isLoading: false });
+          throw err; // re-throw so the register page can catch and show the error
         }
+        set({ isLoading: false });
       },
 
       logout: async () => {
@@ -64,6 +84,7 @@ export const useAuthStore = create<AuthState>()(
           // Always clear locally even if server call fails
         }
         tokenStorage.clear();
+        clearAuthCookie();
         set({ user: null, isAuthenticated: false });
       },
 
@@ -73,9 +94,11 @@ export const useAuthStore = create<AuthState>()(
         set({ isLoading: true });
         try {
           const user = await authService.me();
+          setAuthCookie();
           set({ user, isAuthenticated: true });
         } catch {
           tokenStorage.clear();
+          clearAuthCookie();
           set({ user: null, isAuthenticated: false });
         } finally {
           set({ isLoading: false });
