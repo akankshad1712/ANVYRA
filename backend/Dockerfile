@@ -14,4 +14,4 @@ RUN addgroup -S anvyra && adduser -S anvyra -G anvyra
 COPY --from=builder /app/target/*.jar app.jar
 USER anvyra
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-Dspring.profiles.active=prod", "-jar", "app.jar"]
