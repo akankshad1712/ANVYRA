@@ -8,3 +8,6 @@ export const wishlistService = {
   checkInWishlist: (productId: number) =>
     api.get<{ inWishlist: boolean }>(`/wishlist/${productId}/check`),
 };
+
+
+

@@ -56,6 +56,21 @@ SELECT p.id, s FROM products p, unnest(ARRAY['S','M','L','XL','XXL']) s
 WHERE p.category_id = (SELECT id FROM categories WHERE slug='jackets');
 
 INSERT INTO product_sizes (product_id, size)
+INSERT INTO Product_sizes (product_id, size)
+SELECT INTO Product_sizes (product_id, size)
+WHERE p.category_id = (SELECT id FROM categories WHERE slug ='jackets');
+
+SELECT INTO product_sizes (product_id, size)
+
+((SELECT id FROM products WHERE name ='ANVYRA White '))
+
+
+
+
+
+
+
+
 SELECT p.id, s FROM products p, unnest(ARRAY['S','M','L','XL','XXL','3XL']) s
 WHERE p.category_id = (SELECT id FROM categories WHERE slug='oversized');
 
@@ -91,3 +106,4 @@ UNION ALL SELECT 'Products', COUNT(*) FROM products
 UNION ALL SELECT 'Images', COUNT(*) FROM product_images
 UNION ALL SELECT 'Sizes', COUNT(*) FROM product_sizes
 UNION ALL SELECT 'Colors', COUNT(*) FROM product_colors;
+

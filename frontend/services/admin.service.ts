@@ -72,4 +72,4 @@ export const adminService = {
     api.get<PagedResponse<User>>("/admin/users", {
       params: params as Record<string, string | number | undefined | null>,
     }),
-};
+}; 
