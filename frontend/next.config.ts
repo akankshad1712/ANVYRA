@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: "standalone",
+  // output: "standalone" — only needed for Docker/self-hosted, breaks Vercel
   turbopack: {
     root: __dirname,
   },
