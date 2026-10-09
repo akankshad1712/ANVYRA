@@ -1,0 +1,27 @@
+services:
+  - type: web
+    name: anvyra-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: singapore
+    envVars:
+      - key: DB_URL
+        value: jdbc:postgresql://dpg-db4iqk6i0phs73cr8n1g-a/anvyra_db
+      - key: DB_USERNAME
+        value: anvyra_db_user
+      - key: DB_PASSWORD
+        value: qQxULyGFPhNRzVugqfbagcPKwhreHT50
+      - key: REDIS_URL
+        value: rediss://default:gQAAAAAAA0wwAAIgcDEyZDhlYWFkZGMzZTc0Yzc5YTUzNTU0ZTg5Njk5ZmJhMg@viable-piranha-216112.upstash.io:6379
+      - key: APP_JWT_SECRET
+        value: AnvyraProductionJwtSecretKeyMinimum64CharactersLongForHS256AlgorithmSecure!!
+      - key: APP_JWT_EXPIRES_MS
+        value: 900000
+      - key: APP_JWT_REFRESH_EXPIRES_SECONDS
+        value: 2592000
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://anvyra-klb2.vercel.app
+      - key: JPA_DDL_AUTO
+        value: update
