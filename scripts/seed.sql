@@ -55,18 +55,6 @@ INSERT INTO product_sizes (product_id, size)
 SELECT p.id, s FROM products p, unnest(ARRAY['S','M','L','XL','XXL']) s
 WHERE p.category_id = (SELECT id FROM categories WHERE slug='jackets');
 
-INSERT INTO product_sizes (product_id, size)
-INSERT INTO Product_sizes (product_id, size)
-SELECT INTO Product_sizes (product_id, size)
-WHERE p.category_id = (SELECT id FROM categories WHERE slug ='jackets');
-
-SELECT INTO product_sizes (product_id, size)
-
-((SELECT id FROM products WHERE name ='ANVYRA White '))
-
-
-
-
 
 
 
@@ -80,7 +68,7 @@ WHERE p.category_id = (SELECT id FROM categories WHERE slug='shirts');
 
 INSERT INTO product_sizes (product_id, size)
 SELECT p.id, s FROM products p, unnest(ARRAY['28','30','32','34','36']) s
-WHERE p.category_id = (SELECT id FROM categories WHERE slug IN ('trousers','jeans'));
+WHERE p.category_id IN (SELECT id FROM categories WHERE slug IN ('trousers','jeans'));
 
 -- ── Colors ────────────────────────────────────────────────────────────────────
 INSERT INTO product_colors (product_id, color) VALUES
