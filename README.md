@@ -39,13 +39,13 @@
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social&label=⭐%20Star"/>
+<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social&label=Star"/>
 &nbsp;
-<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social&label=🍴%20Fork"/>
+<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social&label=Fork"/>
 &nbsp;
-<img src="https://img.shields.io/github/watchers/akankshad1712/ANVYRA?style=social&label=👁%20Watch"/>
+<img src="https://img.shields.io/github/watchers/akankshad1712/ANVYRA?style=social&label=Watch"/>
 &nbsp;
-<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social&label=🕐%20Updated"/>
+<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social&label=Updated"/>
 
 </div>
 
@@ -104,8 +104,8 @@ This is a production-grade, cloud-deployed, full-stack platform — live on the 
 
 | | Service | URL | Status |
 |:---:|---|---|:---:|
-| 🛍️ | **Frontend** | [anvyra-klb2.vercel.app](https://anvyra-klb2.vercel.app) | ![](https://img.shields.io/website?url=https://anvyra-klb2.vercel.app&style=flat-square&label=&up_message=live&up_color=00C851&down_color=ff4444) |
-| ⚙️ | **Backend API** | [anvyra.onrender.com/api](https://anvyra.onrender.com/api) | ![](https://img.shields.io/website?url=https://anvyra.onrender.com/actuator/health&style=flat-square&label=&up_message=live&up_color=00C851&down_color=ff4444) |
+| 🛍️ | **Frontend** | [anvyra-klb2.vercel.app](https://anvyra-klb2.vercel.app) | ![](https://img.shields.io/badge/status-live-00C851?style=flat-square) |
+| ⚙️ | **Backend API** | [anvyra.onrender.com/api](https://anvyra.onrender.com/api) | ![](https://img.shields.io/badge/status-live-00C851?style=flat-square) |
 | 📖 | **Swagger Docs** | [swagger-ui/index.html](https://anvyra.onrender.com/swagger-ui/index.html) | 🟢 Live |
 | 💻 | **Repository** | [akankshad1712/ANVYRA](https://github.com/akankshad1712/ANVYRA) | 🟢 Public |
 
