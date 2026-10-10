@@ -21,6 +21,8 @@
 <a href="https://anvyra.onrender.com/swagger-ui/index.html"><img src="https://img.shields.io/badge/📖%20API%20DOCS-Swagger%20UI-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=0a0a0a"/></a>
 &nbsp;
 <a href="https://github.com/akankshad1712/ANVYRA"><img src="https://img.shields.io/badge/⭐%20SOURCE-GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0a"/></a>
+&nbsp;
+<a href="https://www.linkedin.com/in/akanksha-deshmukh-26210b244/"><img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0a0a0a"/></a>
 
 <br/><br/>
 
@@ -466,6 +468,8 @@ npm install && npm run dev
 <br/>
 
 [![GitHub](https://img.shields.io/badge/Follow%20on%20GitHub-akankshad1712-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/akankshad1712)
+&nbsp;
+[![LinkedIn](https://img.shields.io/badge/Connect%20on%20LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akanksha-deshmukh-26210b244/)
 
 </div>
 
