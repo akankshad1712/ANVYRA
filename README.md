@@ -1,7 +1,13 @@
 <div align="center">
 <br/>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:1a1a2e,100:8B6914&height=200&section=header&text=ANVYRA&fontSize=80&fontColor=ffffff&fontAlignY=38&desc=Dress%20The%20Story&descAlignY=60&descColor=C4956A&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,50:1a1a2e,100:8B6914&height=220&section=header&text=&fontSize=80&fontColor=ffffff&fontAlignY=38&descAlignY=60&descColor=C4956A&animation=fadeIn" width="100%"/>
+
+<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/Gold_on_Black.png" alt="ANVYRA Logo" width="280"/>
+
+<br/>
+
+<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-logo-gold.png" alt="ANVYRA Gold Logo" width="220"/>
 
 <br/>
 
