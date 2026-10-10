@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     template: "%s | ANVYRA FASHION",
   },
   description:
-    "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in 2025, Latur. Shop premium jackets, oversized tees, shirts, trousers and jeans. Dress the Story.",
+    "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in 2025, Pune. Shop premium jackets, oversized tees, shirts, trousers and jeans. Dress the Story.",
   keywords: [
     "ANVYRA",
     "ANVYRA FASHION",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     "ANVYRA founder Akanksha Deshmukh",
     "ANVYRA fashion brand",
     "premium Indian fashion",
-    "Indian fashion brand Latur",
+    "Indian fashion brand Pune",
     "dress the story",
     "premium streetwear India",
     "oversized t-shirts India",
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "ANVYRA FASHION — Founded by Akanksha Deshmukh | Dress The Story",
     description:
-      "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in Latur, 2025. Shop jackets, tees, shirts, trousers and jeans.",
+      "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in Pune, 2025. Shop jackets, tees, shirts, trousers and jeans.",
     type: "website",
     locale: "en_IN",
     siteName: "ANVYRA FASHION",
@@ -98,7 +98,7 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// JSON-LD — tells Google: ANVYRA FASHION was founded by Akanksha Deshmukh in Latur in 2025
+// JSON-LD — tells Google: ANVYRA FASHION was founded by Akanksha Deshmukh in Pune in 2025
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -113,10 +113,10 @@ const jsonLd = {
       foundingDate: "2025",
       foundingLocation: {
         "@type": "Place",
-        name: "Latur, Maharashtra, India",
+        name: "Pune, Maharashtra, India",
         address: {
           "@type": "PostalAddress",
-          addressLocality: "Latur",
+          addressLocality: "Pune",
           addressRegion: "Maharashtra",
           addressCountry: "IN",
         },
