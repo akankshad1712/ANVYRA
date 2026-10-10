@@ -1,36 +1,28 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=280&section=header&text=ANVYRA&fontSize=90&fontColor=C4956A&fontAlignY=45&desc=✦%20Dress%20The%20Story%20✦&descSize=22&descAlignY=68&descColor=ffffff&animation=fadeIn&stroke=C4956A&strokeWidth=1" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=260&section=header&text=ANVYRA&fontSize=95&fontColor=C4956A&fontAlignY=42&desc=✦%20%20Dress%20The%20Story%20%20✦&descSize=20&descAlignY=65&descColor=ffffff&animation=fadeIn&stroke=8B6914&strokeWidth=2" width="100%"/>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/Gold_on_Black.png" alt="ANVYRA" width="320"/>
+<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-badge.png" alt="ANVYRA" width="90"/>
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=20&duration=3000&pause=800&color=C4956A&center=true&vCenter=true&multiline=false&width=650&lines=✦+Premium+Indian+Fashion+E-Commerce+✦;Founded+%26+Built+by+Akanksha+Deshmukh;Next.js+16+%C2%B7+Spring+Boot+3.5+%C2%B7+PostgreSQL+%C2%B7+Redis;Production+Deployed+%C2%B7+Live+%C2%B7+Real+Brand" alt="Typing SVG"/>
+<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=19&duration=3000&pause=900&color=C4956A&center=true&vCenter=true&width=680&lines=✦+Premium+Indian+Fashion+E-Commerce+✦;Founded+%26+Built+by+Akanksha+Deshmukh;Next.js+16+%C2%B7+Spring+Boot+3.5+%C2%B7+PostgreSQL+%C2%B7+Redis;Production+Deployed+%C2%B7+Live+%C2%B7+Real+Brand" alt="Typing"/>
 
 <br/><br/>
 
-<a href="https://anvyra-klb2.vercel.app">
-  <img src="https://img.shields.io/badge/◉%20LIVE%20DEMO-Visit%20ANVYRA-C4956A?style=for-the-badge&logo=vercel&logoColor=white&labelColor=000000" alt="Live Demo"/>
-</a>
+<a href="https://anvyra-klb2.vercel.app"><img src="https://img.shields.io/badge/◉%20LIVE%20DEMO-anvyra--klb2.vercel.app-C4956A?style=for-the-badge&logo=vercel&logoColor=white&labelColor=000000"/></a>
 &nbsp;
-<a href="https://anvyra.onrender.com/api">
-  <img src="https://img.shields.io/badge/⚡%20BACKEND-REST%20API-00C7B7?style=for-the-badge&logo=render&logoColor=white&labelColor=0a0a0a" alt="API"/>
-</a>
+<a href="https://anvyra.onrender.com/api"><img src="https://img.shields.io/badge/⚡%20BACKEND-anvyra.onrender.com-00C7B7?style=for-the-badge&logo=render&logoColor=white&labelColor=0a0a0a"/></a>
 &nbsp;
-<a href="https://anvyra.onrender.com/swagger-ui/index.html">
-  <img src="https://img.shields.io/badge/📖%20SWAGGER-API%20Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=0a0a0a" alt="Swagger"/>
-</a>
+<a href="https://anvyra.onrender.com/swagger-ui/index.html"><img src="https://img.shields.io/badge/📖%20API%20DOCS-Swagger%20UI-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=0a0a0a"/></a>
 &nbsp;
-<a href="https://github.com/akankshad1712/ANVYRA">
-  <img src="https://img.shields.io/badge/⭐%20GITHUB-Source%20Code-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0a" alt="GitHub"/>
-</a>
+<a href="https://github.com/akankshad1712/ANVYRA"><img src="https://img.shields.io/badge/⭐%20SOURCE-GitHub-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=0a0a0a"/></a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=nextdotjs&logoColor=white"/>
+<img src="https://img.shields.io/badge/Next.js_16-000?style=flat-square&logo=nextdotjs&logoColor=white"/>
 <img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black"/>
 <img src="https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
 <img src="https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"/>
@@ -39,14 +31,19 @@
 <img src="https://img.shields.io/badge/PostgreSQL_18-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
 <img src="https://img.shields.io/badge/Redis_7-DC382D?style=flat-square&logo=redis&logoColor=white"/>
 <img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white"/>
+<img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white"/>
 <img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black"/>
+<img src="https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white"/>
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social&label=⭐ Star"/> &nbsp;
-<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social&label=🍴 Fork"/> &nbsp;
-<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social&label=🕐 Last Commit"/>
+<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social&label=⭐%20Star"/>
+&nbsp;
+<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social&label=🍴%20Fork"/>
+&nbsp;
+<img src="https://img.shields.io/github/watchers/akankshad1712/ANVYRA?style=social&label=👁%20Watch"/>
+&nbsp;
+<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social&label=🕐%20Updated"/>
 
 </div>
 
@@ -60,34 +57,33 @@
 
 <table>
 <tr>
-<td valign="top" width="65%">
+<td valign="top">
 
-### A Real Brand. Built By One Person.
+**ANVYRA** is a real premium Indian fashion brand — not a tutorial, not a clone.
 
-**ANVYRA** is a premium Indian fashion label built for those who wear their story.
+Every API endpoint, every UI component, every database schema, every deployment config was created by **one person**: founder and engineer **Akanksha Deshmukh**.
 
-Founded and engineered by **Akanksha Deshmukh** — every line of code, every product, every design decision was made from scratch. No templates. No shortcuts. A production-grade, cloud-deployed, full-stack e-commerce platform that is live on the internet right now.
+This is a production-grade, cloud-deployed, full-stack platform — live on the internet, serving real requests, backed by PostgreSQL and Redis.
 
-> *Inspired by the audacity of building something real.*
-> *Driven by the belief that great software and great brands are made the same way — with intention.*
+> *"Built For Legacy."*
+> *Not just a project — a brand being built from the ground up.*
 
 </td>
-<td valign="top" align="center" width="35%">
-
-<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-logo-gold.png" alt="ANVYRA Gold" width="160"/>
+<td align="center" width="240" valign="top">
 
 ```
-┌─────────────────────┐
-│                     │
-│   Built For Legacy  │
-│                     │
-│   🛍️  Fashion        │
-│   ⚙️  Full Stack     │
-│   ☁️  Cloud Native   │
-│   🔐  JWT Secured   │
-│   ⚡  Redis Cached  │
-│                     │
-└─────────────────────┘
+╔═════════════════════╗
+║                     ║
+║   A N V Y R A       ║
+║   ─────────────     ║
+║   🛍️  Fashion        ║
+║   ⚙️  Full Stack     ║
+║   ☁️  Cloud Native   ║
+║   🔐  JWT Auth       ║
+║   ⚡  Redis Cache    ║
+║   🐳  Docker Ready   ║
+║                     ║
+╚═════════════════════╝
 ```
 
 </td>
@@ -104,33 +100,12 @@ Founded and engineered by **Akanksha Deshmukh** — every line of code, every pr
 
 <div align="center">
 
-<table>
-<tr>
-<th>Service</th>
-<th>URL</th>
-<th>Status</th>
-</tr>
-<tr>
-<td>🛍️ <b>Frontend</b></td>
-<td><a href="https://anvyra-klb2.vercel.app">anvyra-klb2.vercel.app</a></td>
-<td><img src="https://img.shields.io/website?url=https://anvyra-klb2.vercel.app&style=flat-square&label=&up_message=online&down_message=offline&up_color=00C851&down_color=ff4444"/></td>
-</tr>
-<tr>
-<td>⚙️ <b>Backend API</b></td>
-<td><a href="https://anvyra.onrender.com/api">anvyra.onrender.com/api</a></td>
-<td><img src="https://img.shields.io/website?url=https://anvyra.onrender.com/actuator/health&style=flat-square&label=&up_message=online&down_message=offline&up_color=00C851&down_color=ff4444"/></td>
-</tr>
-<tr>
-<td>📖 <b>API Docs</b></td>
-<td><a href="https://anvyra.onrender.com/swagger-ui/index.html">Swagger UI</a></td>
-<td>🟢 Live</td>
-</tr>
-<tr>
-<td>💻 <b>Repository</b></td>
-<td><a href="https://github.com/akankshad1712/ANVYRA">github.com/akankshad1712/ANVYRA</a></td>
-<td>🟢 Public</td>
-</tr>
-</table>
+| | Service | URL | Status |
+|:---:|---|---|:---:|
+| 🛍️ | **Frontend** | [anvyra-klb2.vercel.app](https://anvyra-klb2.vercel.app) | ![](https://img.shields.io/website?url=https://anvyra-klb2.vercel.app&style=flat-square&label=&up_message=live&up_color=00C851&down_color=ff4444) |
+| ⚙️ | **Backend API** | [anvyra.onrender.com/api](https://anvyra.onrender.com/api) | ![](https://img.shields.io/website?url=https://anvyra.onrender.com/actuator/health&style=flat-square&label=&up_message=live&up_color=00C851&down_color=ff4444) |
+| 📖 | **Swagger Docs** | [swagger-ui/index.html](https://anvyra.onrender.com/swagger-ui/index.html) | 🟢 Live |
+| 💻 | **Repository** | [akankshad1712/ANVYRA](https://github.com/akankshad1712/ANVYRA) | 🟢 Public |
 
 </div>
 
@@ -143,35 +118,36 @@ Founded and engineered by **Akanksha Deshmukh** — every line of code, every pr
 ## 〄 &nbsp; System Architecture
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                        ANVYRA PLATFORM                              │
-├─────────────────────────────────────────────────────────────────────┤
-│                                                                     │
-│   👤 USER (Browser / Mobile)                                        │
-│         │                                                           │
-│         │ HTTPS                                                     │
-│         ▼                                                           │
-│  ┌──────────────────────────────────────────────────────────────┐   │
-│  │                 VERCEL  ·  Global Edge CDN                    │   │
-│  │                                                              │   │
-│  │   Next.js 16   React 19   TypeScript 5   Tailwind v4         │   │
-│  │   Zustand   TanStack Query   Framer Motion   shadcn/ui       │   │
-│  └───────────────────────────┬──────────────────────────────────┘   │
-│                              │ REST / JSON over HTTPS               │
-│                              ▼                                      │
-│  ┌──────────────────────────────────────────────────────────────┐   │
-│  │               RENDER  ·  Docker Container                    │   │
-│  │                                                              │   │
-│  │   Spring Boot 3.5   Java 21   Spring Security   Hibernate 6  │   │
-│  │   JWT Auth   Actuator   CORS   Global Exception Handler      │   │
-│  └────────────────────┬─────────────────────┬───────────────────┘   │
-│                       │                     │                       │
-│          ┌────────────▼──────────┐  ┌───────▼────────────────────┐  │
-│          │   PostgreSQL 18       │  │   Redis 7  (Upstash · TLS) │  │
-│          │   Render Managed DB   │  │   Token Store · API Cache  │  │
-│          └───────────────────────┘  └────────────────────────────┘  │
-│                                                                     │
-└─────────────────────────────────────────────────────────────────────┘
+  ╔═══════════════════════════════════════════════════════════════════╗
+  ║                     A N V Y R A   P L A T F O R M                ║
+  ╠═══════════════════════════════════════════════════════════════════╣
+  ║                                                                   ║
+  ║   👤  USER  ( Browser · Mobile · Tablet )                         ║
+  ║         │                                                         ║
+  ║         │  HTTPS / TLS                                            ║
+  ║         ▼                                                         ║
+  ║  ┌─────────────────────────────────────────────────────────────┐  ║
+  ║  │              VERCEL  ·  Global Edge Network                  │  ║
+  ║  │                                                             │  ║
+  ║  │  Next.js 16  ·  React 19  ·  TypeScript 5                   │  ║
+  ║  │  Tailwind v4  ·  Framer Motion  ·  shadcn/ui                │  ║
+  ║  │  Zustand  ·  TanStack Query  ·  React Hook Form             │  ║
+  ║  └──────────────────────────┬──────────────────────────────────┘  ║
+  ║                             │  REST / JSON                        ║
+  ║                             ▼                                     ║
+  ║  ┌─────────────────────────────────────────────────────────────┐  ║
+  ║  │              RENDER  ·  Docker Container                     │  ║
+  ║  │                                                             │  ║
+  ║  │  Spring Boot 3.5  ·  Java 21  ·  Spring Security            │  ║
+  ║  │  JWT + Refresh Tokens  ·  Hibernate 6  ·  Actuator          │  ║
+  ║  └──────────────┬──────────────────────────┬───────────────────┘  ║
+  ║                 │                          │                      ║
+  ║  ┌──────────────▼──────────┐  ┌────────────▼──────────────────┐   ║
+  ║  │   PostgreSQL 18         │  │   Redis 7  (Upstash · TLS)    │   ║
+  ║  │   Render Managed DB     │  │   Token Store + API Cache     │   ║
+  ║  └─────────────────────────┘  └───────────────────────────────┘   ║
+  ║                                                                   ║
+  ╚═══════════════════════════════════════════════════════════════════╝
 ```
 
 <br/>
@@ -184,24 +160,25 @@ Founded and engineered by **Akanksha Deshmukh** — every line of code, every pr
 
 <div align="center">
 
-| Layer | Technology | Version | Purpose |
+| Layer | Technology | Version | Role |
 |:---:|---|:---:|---|
-| 🖥️ | **Next.js** | 16 | App Router, SSR, SSG |
-| ⚛️ | **React** | 19 | UI rendering |
-| 🔷 | **TypeScript** | 5 | Type safety |
-| 🎨 | **Tailwind CSS** | v4 | Styling |
-| 🎬 | **Framer Motion** | 12 | Animations |
-| 🗂️ | **Zustand** | 5 | Global state |
-| 🔄 | **TanStack Query** | 5 | Server state + caching |
-| ☕ | **Spring Boot** | 3.5 | REST API framework |
+| 🖥️ | **Next.js** | 16 | App Router · SSR · SSG · API Routes |
+| ⚛️ | **React** | 19 | Component rendering |
+| 🔷 | **TypeScript** | 5 | End-to-end type safety |
+| 🎨 | **Tailwind CSS** | v4 | Utility-first styling |
+| 🎬 | **Framer Motion** | 12 | Page & component animations |
+| 🗂️ | **Zustand** | 5 | Lightweight global state |
+| 🔄 | **TanStack Query** | 5 | Server state · caching · sync |
+| ☕ | **Spring Boot** | 3.5 | REST API · DI · Auto-config |
 | ☕ | **Java** | 21 | Backend runtime |
-| 🔐 | **Spring Security** | — | Auth + authorization |
-| 🎟️ | **JWT** | — | Stateless auth tokens |
-| 🐘 | **PostgreSQL** | 18 | Primary database |
-| ⚡ | **Redis** | 7 | Caching + token store |
+| 🔐 | **Spring Security** | — | Auth · role-based access |
+| 🎟️ | **JWT** | — | Stateless access + refresh tokens |
+| 🐘 | **PostgreSQL** | 18 | Relational data store |
+| ⚡ | **Redis** | 7 | Caching + token blacklisting |
 | 🐳 | **Docker** | — | Containerization |
-| 🚀 | **Vercel** | — | Frontend deployment |
-| 🌐 | **Render** | — | Backend deployment |
+| 🚀 | **Vercel** | — | Frontend CDN deployment |
+| 🌐 | **Render** | — | Backend Docker deployment |
+| 🔄 | **GitHub Actions** | — | CI/CD pipeline |
 
 </div>
 
@@ -217,44 +194,60 @@ Founded and engineered by **Akanksha Deshmukh** — every line of code, every pr
 
 <table>
 <tr>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
 
-### 🛍️ Shopping
-Product catalog · filters<br/>
-Price range · sort<br/>
+**🛍️ Shopping**
+
+Product catalog<br/>
+Category filters<br/>
+Price range filter<br/>
+Sort (new / price)<br/>
 Product gallery<br/>
-Size & color selector<br/>
-Real-time search
+Size & color picker<br/>
+Real-time search<br/>
+Featured products
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
 
-### 🔐 Auth
+**🔐 Auth & Account**
+
+Register · Login<br/>
 JWT access tokens<br/>
 Refresh token rotation<br/>
 Redis invalidation<br/>
 Protected routes<br/>
-Admin role guard
+Admin role guard<br/>
+Profile management<br/>
+Address book
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
 
-### 🛒 Cart & Orders
+**🛒 Cart & Orders**
+
 Persistent cart<br/>
 Quantity management<br/>
+Wishlist<br/>
 Multi-step checkout<br/>
-Address book<br/>
-Order tracking
+Order placement<br/>
+Order history<br/>
+Status tracking<br/>
+COD + payment-ready
 
 </td>
-<td align="center" width="25%">
+<td align="center" width="25%" valign="top">
 
-### 🛠️ Admin
+**🛠️ Admin Panel**
+
 Live dashboard stats<br/>
+Revenue analytics<br/>
 Product CRUD<br/>
 Category management<br/>
 Order status updates<br/>
-User management
+User management<br/>
+Inactive product toggle<br/>
+Paginated data tables
 
 </td>
 </tr>
@@ -279,28 +272,31 @@ ANVYRA/
 │   │   ├── (customer)/                  Cart · Checkout · Orders · Wishlist
 │   │   ├── (auth)/                      Login · Register
 │   │   ├── (admin)/                     Dashboard · Products · Orders · Users
-│   │   ├── about/                       Brand story page
+│   │   ├── about/                       Brand story
 │   │   └── contact/                     Contact page
-│   ├── components/                      Reusable UI library
+│   ├── components/
+│   │   ├── ui/                          Buttons · Inputs · Modals · Badges
+│   │   ├── layout/                      Navbar · Footer · Sidebar
+│   │   └── features/                    ProductCard · CartItem · OrderRow
 │   ├── services/                        Typed API clients (one per domain)
 │   ├── store/                           Zustand state atoms
-│   ├── lib/                             API fetch wrapper · utilities
+│   ├── lib/                             Core API client · utilities
 │   └── types/                           Shared TypeScript interfaces
 │
 ├── ⚙️  backend/                          Spring Boot 3.5 · Java 21
 │   └── src/main/java/com/anvyra/
 │       ├── controller/                  12 REST controllers
-│       ├── service/                     Business logic layer
+│       ├── service/                     Business logic
 │       ├── repository/                  12 JPA repositories
 │       ├── entity/                      11 JPA entities
-│       ├── dto/                         23 Request / Response DTOs
+│       ├── dto/                         23 DTOs
 │       ├── mapper/                      Entity ↔ DTO mappers
 │       ├── security/                    JWT filter · UserDetails
 │       ├── config/                      CORS · Redis · Security
 │       └── exception/                   Global error handler
 │
-├── 📜  scripts/seed.sql                 5 categories · 15 products · sizes · colors
-├── 🐳  docker-compose.yml               Full local stack in one command
+├── 📜  scripts/seed.sql                 5 categories · 15 products
+├── 🐳  docker-compose.yml               One-command local stack
 ├── 📦  render.yaml                      Render IaC config
 └── 🚀  vercel.json                      Vercel deployment config
 ```
@@ -320,18 +316,18 @@ ANVYRA/
 
 | Method | Endpoint | Access | Description |
 |---|---|:---:|---|
-| `POST` | `/api/auth/register` | 🌐 | Create new account |
-| `POST` | `/api/auth/login` | 🌐 | Login · receive JWT tokens |
+| `POST` | `/api/auth/register` | 🌐 | Create account |
+| `POST` | `/api/auth/login` | 🌐 | Login · get tokens |
 | `POST` | `/api/auth/refresh` | 🌐 | Rotate access token |
-| `POST` | `/api/auth/logout` | 🔐 | Invalidate session in Redis |
+| `POST` | `/api/auth/logout` | 🔐 | Invalidate in Redis |
 | `GET` | `/api/products` | 🌐 | Paginated · filtered · sorted |
-| `GET` | `/api/products/{id}` | 🌐 | Full product detail |
-| `GET` | `/api/categories` | 🌐 | All active categories |
-| `GET` | `/api/cart` | 🔐 | User's cart |
-| `POST` | `/api/cart/items` | 🔐 | Add item to cart |
+| `GET` | `/api/products/{id}` | 🌐 | Product detail |
+| `GET` | `/api/categories` | 🌐 | All categories |
+| `GET` | `/api/cart` | 🔐 | User cart |
+| `POST` | `/api/cart/items` | 🔐 | Add to cart |
 | `PUT` | `/api/cart/items/{id}` | 🔐 | Update quantity |
 | `DELETE` | `/api/cart/items/{id}` | 🔐 | Remove item |
-| `GET` | `/api/wishlist` | 🔐 | User's wishlist |
+| `GET` | `/api/wishlist` | 🔐 | Wishlist |
 | `POST` | `/api/wishlist/{productId}` | 🔐 | Toggle wishlist |
 | `POST` | `/api/orders` | 🔐 | Place order |
 | `GET` | `/api/orders` | 🔐 | Order history |
@@ -339,7 +335,7 @@ ANVYRA/
 | `GET` | `/api/addresses` | 🔐 | Saved addresses |
 | `POST` | `/api/addresses` | 🔐 | Add address |
 | `GET` | `/api/reviews/product/{id}` | 🌐 | Product reviews |
-| `POST` | `/api/reviews` | 🔐 | Post review |
+| `POST` | `/api/reviews` | 🔐 | Submit review |
 | `GET` | `/api/admin/dashboard/stats` | 👑 | Live stats |
 | `POST` | `/api/products` | 👑 | Create product |
 | `PUT` | `/api/products/{id}` | 👑 | Update product |
@@ -359,13 +355,12 @@ ANVYRA/
 
 ## 〄 &nbsp; Quick Start
 
-### 🐳 &nbsp; With Docker
+### 🐳 &nbsp; Docker — one command
 
 ```bash
 git clone https://github.com/akankshad1712/ANVYRA.git
 cd ANVYRA
-cp .env.example .env
-# Set DB_PASSWORD + APP_JWT_SECRET in .env
+cp .env.example .env          # set DB_PASSWORD + APP_JWT_SECRET
 docker compose up -d
 ```
 
@@ -375,13 +370,13 @@ docker compose up -d
 | ⚙️ API | http://localhost:8080/api |
 | 📖 Swagger | http://localhost:8080/swagger-ui/index.html |
 
-### 💻 &nbsp; Without Docker
+### 💻 &nbsp; Manual
 
 ```bash
 # Backend — needs PostgreSQL:5432 + Redis:6379
 cd backend
 export DB_PASSWORD=yourpassword
-export APP_JWT_SECRET=AtLeast64CharacterSecretKeyForJWT!!
+export APP_JWT_SECRET=AtLeast64CharacterSecretKey!!
 ./mvnw spring-boot:run
 
 # Frontend
@@ -403,12 +398,13 @@ npm install && npm run dev
 <td width="50%">
 
 **⚙️ Backend**
+
 | Variable | Purpose |
 |---|---|
 | `DB_URL` | PostgreSQL JDBC URL |
 | `DB_USERNAME` | DB username |
 | `DB_PASSWORD` | DB password |
-| `APP_JWT_SECRET` | JWT key (64+ chars) |
+| `APP_JWT_SECRET` | JWT signing key (64+ chars) |
 | `REDIS_URL` | `rediss://` TLS URL |
 | `CORS_ALLOWED_ORIGINS` | Allowed frontend origins |
 
@@ -416,11 +412,13 @@ npm install && npm run dev
 <td width="50%">
 
 **🖥️ Frontend**
+
 | Variable | Purpose |
 |---|---|
 | `NEXT_PUBLIC_API_URL` | Backend API base URL |
 
-**☁️ Platforms**
+**☁️ Cloud Platforms**
+
 | Service | Platform |
 |---|---|
 | Frontend | Vercel |
@@ -442,29 +440,25 @@ npm install && npm run dev
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-badge.png" alt="ANVYRA Badge" width="100"/>
-
-<br/><br/>
-
 ```
-╔══════════════════════════════════════════════════════════════════╗
-║                                                                  ║
-║     ✦   A K A N K S H A   D E S H M U K H   ✦                   ║
-║                                                                  ║
-║     Founder  ·  Brand Architect  ·  Full Stack Engineer          ║
-║                                                                  ║
-║     ◈  Designed the brand identity & visual language             ║
-║     ◈  Architected and built the entire Spring Boot API          ║
-║     ◈  Built the complete Next.js 16 frontend from scratch       ║
-║     ◈  Designed the PostgreSQL schema & Redis caching layer      ║
-║     ◈  Configured Docker, GitHub Actions, CI/CD pipeline         ║
-║     ◈  Deployed to Vercel + Render — live on the internet        ║
-║     ◈  Ships alone. Owns everything.                             ║
-║                                                                  ║
-║     ❝  ANVYRA is not just a project.                             ║
-║        It is the brand I am building.  ❞                         ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
+  ╔══════════════════════════════════════════════════════════════════╗
+  ║                                                                  ║
+  ║     ✦   A K A N K S H A   D E S H M U K H   ✦                   ║
+  ║                                                                  ║
+  ║     Founder  ·  Brand Architect  ·  Full Stack Engineer          ║
+  ║                                                                  ║
+  ║     ◈  Designed the brand identity & visual language             ║
+  ║     ◈  Architected and built the entire Spring Boot API          ║
+  ║     ◈  Built the complete Next.js 16 frontend from scratch       ║
+  ║     ◈  Designed PostgreSQL schema & Redis caching strategy       ║
+  ║     ◈  Configured Docker, GitHub Actions, CI/CD pipeline         ║
+  ║     ◈  Deployed to Vercel + Render — live on the internet        ║
+  ║     ◈  Ships alone. Owns everything.                             ║
+  ║                                                                  ║
+  ║     ❝  ANVYRA is not just a project.                             ║
+  ║        It is the brand I am building.  ❞                         ║
+  ║                                                                  ║
+  ╚══════════════════════════════════════════════════════════════════╝
 ```
 
 <br/>
@@ -477,20 +471,11 @@ npm install && npm run dev
 
 ---
 
-<br/>
-
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=150&section=footer&text=Built%20For%20Legacy&fontSize=28&fontColor=C4956A&fontAlignY=65&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=140&section=footer&text=Built%20For%20Legacy&fontSize=26&fontColor=C4956A&fontAlignY=62&animation=fadeIn" width="100%"/>
 
 <br/>
-
-<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social"/> &nbsp;
-<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social"/> &nbsp;
-<img src="https://img.shields.io/github/watchers/akankshad1712/ANVYRA?style=social"/> &nbsp;
-<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social"/>
-
-<br/><br/>
 
 *Crafted with ambition, precision, and zero shortcuts.*
 <br/>
