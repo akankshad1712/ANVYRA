@@ -5,6 +5,10 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  env: {
+    // Ensure the backend URL is always available even if Vercel env var is missing
+    NEXT_PUBLIC_API_URL: process.env.NEXT_PUBLIC_API_URL ?? "https://anvyra.onrender.com/api",
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**" },
