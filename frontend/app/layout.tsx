@@ -25,50 +25,56 @@ const BASE_URL = "https://anvyra-klb2.vercel.app";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "ANVYRA — Dress the Story | Premium Indian Fashion",
-    template: "%s | ANVYRA",
+    default: "ANVYRA FASHION — Founded by Akanksha Deshmukh | Dress The Story",
+    template: "%s | ANVYRA FASHION",
   },
   description:
-    "ANVYRA is a premium Indian fashion brand founded by Akanksha Deshmukh. Shop premium jackets, oversized tees, shirts, trousers and jeans. Dress the Story.",
+    "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in 2025, Latur. Shop premium jackets, oversized tees, shirts, trousers and jeans. Dress the Story.",
   keywords: [
     "ANVYRA",
+    "ANVYRA FASHION",
     "Akanksha Deshmukh",
-    "ANVYRA founder",
+    "ANVYRA founder Akanksha Deshmukh",
+    "ANVYRA fashion brand",
     "premium Indian fashion",
-    "Indian fashion brand",
+    "Indian fashion brand Latur",
     "dress the story",
     "premium streetwear India",
-    "oversized t-shirts",
+    "oversized t-shirts India",
     "premium jackets India",
     "fashion e-commerce India",
-    "luxury fashion India",
   ],
-  authors: [{ name: "Akanksha Deshmukh", url: "https://www.linkedin.com/in/akanksha-deshmukh-26210b244/" }],
+  authors: [
+    {
+      name: "Akanksha Deshmukh",
+      url: "https://www.linkedin.com/in/akanksha-deshmukh-26210b244/",
+    },
+  ],
   creator: "Akanksha Deshmukh",
-  publisher: "ANVYRA",
+  publisher: "ANVYRA FASHION",
   category: "Fashion",
   openGraph: {
-    title: "ANVYRA — Dress the Story | Premium Indian Fashion",
+    title: "ANVYRA FASHION — Founded by Akanksha Deshmukh | Dress The Story",
     description:
-      "ANVYRA is a premium Indian fashion brand founded by Akanksha Deshmukh. Shop jackets, tees, shirts, trousers and jeans.",
+      "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in Latur, 2025. Shop jackets, tees, shirts, trousers and jeans.",
     type: "website",
     locale: "en_IN",
-    siteName: "ANVYRA",
+    siteName: "ANVYRA FASHION",
     url: BASE_URL,
     images: [
       {
         url: "/logos/Gold_on_Black.png",
         width: 1200,
         height: 630,
-        alt: "ANVYRA — Dress the Story",
+        alt: "ANVYRA FASHION — Founded by Akanksha Deshmukh | Dress The Story",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "ANVYRA — Dress the Story | Premium Indian Fashion",
+    title: "ANVYRA FASHION — Founded by Akanksha Deshmukh",
     description:
-      "ANVYRA is a premium Indian fashion brand founded by Akanksha Deshmukh.",
+      "Premium Indian fashion brand by Akanksha Deshmukh. Dress the Story.",
     images: ["/logos/Gold_on_Black.png"],
   },
   robots: {
@@ -85,9 +91,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
-  verification: {
-    google: "", // add Google Search Console verification code here when ready
-  },
 };
 
 export const viewport: Viewport = {
@@ -95,18 +98,29 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-// JSON-LD structured data — tells Google who founded ANVYRA
+// JSON-LD — tells Google: ANVYRA FASHION was founded by Akanksha Deshmukh in Latur in 2025
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
-      name: "ANVYRA",
-      alternateName: "ANVYRA Fashion",
+      name: "ANVYRA FASHION",
+      alternateName: "ANVYRA",
       description:
-        "ANVYRA is a premium Indian fashion brand. Dress the Story.",
+        "ANVYRA FASHION is a premium Indian fashion brand founded by Akanksha Deshmukh in 2025. Dress the Story.",
       url: BASE_URL,
+      foundingDate: "2025",
+      foundingLocation: {
+        "@type": "Place",
+        name: "Latur, Maharashtra, India",
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Latur",
+          addressRegion: "Maharashtra",
+          addressCountry: "IN",
+        },
+      },
       logo: {
         "@type": "ImageObject",
         url: `${BASE_URL}/logos/anvyra-badge.png`,
@@ -114,14 +128,11 @@ const jsonLd = {
       founder: {
         "@type": "Person",
         name: "Akanksha Deshmukh",
+        jobTitle: "Founder & Full Stack Engineer",
         sameAs: [
           "https://www.linkedin.com/in/akanksha-deshmukh-26210b244/",
           "https://github.com/akankshad1712",
         ],
-      },
-      foundingLocation: {
-        "@type": "Place",
-        name: "Pune, India",
       },
       sameAs: [
         "https://github.com/akankshad1712/ANVYRA",
@@ -132,11 +143,10 @@ const jsonLd = {
       "@type": "WebSite",
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
-      name: "ANVYRA",
-      description: "Premium Indian Fashion — Dress the Story",
-      publisher: {
-        "@id": `${BASE_URL}/#organization`,
-      },
+      name: "ANVYRA FASHION",
+      description:
+        "Premium Indian Fashion — Dress the Story. Founded by Akanksha Deshmukh.",
+      publisher: { "@id": `${BASE_URL}/#organization` },
       potentialAction: {
         "@type": "SearchAction",
         target: {
@@ -166,7 +176,6 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      {/* cream background — warm luxury base */}
       <body className="min-h-screen bg-[#F7F3EE] text-[#3D1A0A] antialiased">
         <QueryProvider>
           <ToastProvider>

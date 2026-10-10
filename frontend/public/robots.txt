@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /account/
+Disallow: /orders/
+Disallow: /checkout/
+Disallow: /cart/
+
+Sitemap: https://anvyra-klb2.vercel.app/sitemap.xml

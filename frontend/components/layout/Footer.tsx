@@ -149,12 +149,17 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-[#5C2E1A]/40 pt-8 sm:flex-row">
-          <p className="text-xs text-[#A0673A]">
-            © {new Date().getFullYear()} ANVYRA. All rights reserved.
-          </p>
+        <div className="mt-16 flex flex-col items-center justify-between gap-3 border-t border-[#5C2E1A]/40 pt-8 sm:flex-row">
+          <div className="flex flex-col gap-1 text-center sm:text-left">
+            <p className="text-xs text-[#A0673A]">
+              © {new Date().getFullYear()} ANVYRA FASHION by Akanksha Deshmukh. All rights reserved.
+            </p>
+            <p className="text-[10px] text-[#5C2E1A]">
+              Not affiliated with Anvyra Store or any other brand of similar name.
+            </p>
+          </div>
           <p className="text-xs tracking-[0.2em] text-[#C4956A] uppercase">
-            Style Meets You
+            Dress the Story
           </p>
         </div>
       </div>
