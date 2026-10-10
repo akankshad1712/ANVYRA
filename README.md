@@ -8,7 +8,9 @@
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=700&size=19&duration=3000&pause=900&color=C4956A&center=true&vCenter=true&width=680&lines=✦+Premium+Indian+Fashion+E-Commerce+✦;Founded+%26+Built+by+Akanksha+Deshmukh;Next.js+16+%C2%B7+Spring+Boot+3.5+%C2%B7+PostgreSQL+%C2%B7+Redis;Production+Deployed+%C2%B7+Live+%C2%B7+Real+Brand" alt="Typing"/>
+### ✦ &nbsp; Premium Indian Fashion E-Commerce &nbsp; ✦
+#### Founded & Built by &nbsp; **Akanksha Deshmukh**
+`Next.js 16` &nbsp;·&nbsp; `Spring Boot 3.5` &nbsp;·&nbsp; `PostgreSQL` &nbsp;·&nbsp; `Redis` &nbsp;·&nbsp; `Production Deployed · Live`
 
 <br/><br/>
 
