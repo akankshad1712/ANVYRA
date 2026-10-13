@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Grotesk } from "next/font/google";
+import { DM_Sans, Space_Grotesk, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { QueryProvider } from "@/providers/query-provider";
 import { AuthProvider } from "@/providers/auth-provider";
@@ -8,16 +8,29 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CartDrawer from "@/components/cart/CartDrawer";
 
-const inter = Inter({
+// ── DM Sans — clean modern body font ─────────────────────────────────────────
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-dm-sans",
   display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
+// ── Space Grotesk — geometric display/UI font ─────────────────────────────────
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
   variable: "--font-space-grotesk",
   display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+// ── Playfair Display — luxury serif for hero headings ────────────────────────
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
 });
 
 const BASE_URL = "https://anvyra-klb2.vercel.app";
@@ -171,7 +184,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${spaceGrotesk.variable}`}
+      className={`${dmSans.variable} ${spaceGrotesk.variable} ${playfair.variable}`}
     >
       <head>
         <script
@@ -179,7 +192,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-[#F7F3EE] text-[#3D1A0A] antialiased">
+      <body className="min-h-screen bg-[#F7F3EE] text-[#3D1A0A] antialiased font-sans">
         <QueryProvider>
           <ToastProvider>
             <AuthProvider>
