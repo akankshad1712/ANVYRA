@@ -10,7 +10,8 @@ import { useAuthStore } from "@/store/auth.store";
 import { useToast } from "@/providers/toast-provider";
 import Container from "@/components/common/Container";
 import { PageLoader } from "@/components/common/Loading";
-import { Heart, ShoppingBag, Star, Truck, RotateCcw, Shield } from "lucide-react";
+import ProductCard from "@/components/product/ProductCard";
+import { Heart, ShoppingBag, Star, Truck, RotateCcw, Shield, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -40,6 +41,18 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
     enabled: !!id,
   });
 
+  // Related products — same category, exclude current
+  const { data: relatedData } = useQuery({
+    queryKey: ["products", "related", product?.category?.id, id],
+    queryFn: () => productsService.getAll({
+      categoryId: product!.category!.id,
+      size: 5,
+      sortBy: "createdAt",
+      sortDir: "desc",
+    }),
+    enabled: !!product?.category?.id,
+  });
+
   if (isLoading) return <PageLoader />;
   if (!product) return (
     <main className="py-20 text-center bg-[#F7F3EE]">
@@ -60,6 +73,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
     ? Math.round(((product.price - product.discountPrice) / product.price) * 100)
     : 0;
   const reviews = reviewData?.content ?? [];
+  const relatedProducts = (relatedData?.content ?? []).filter((p) => p.id !== product.id).slice(0, 4);
 
   const handleAddToCart = async () => {
     if (!isAuthenticated) { showError("Please sign in to add to cart"); return; }
@@ -98,6 +112,27 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   return (
     <main className="py-10 bg-[#F7F3EE]">
       <Container>
+
+        {/* Breadcrumb */}
+        <nav className="mb-6 flex items-center gap-1.5 text-xs text-[#A0673A]">
+          <Link href="/" className="hover:text-[#5C2E1A] transition-colors">Home</Link>
+          <ChevronRight className="h-3 w-3" />
+          <Link href="/shop" className="hover:text-[#5C2E1A] transition-colors">Shop</Link>
+          {product.category && (
+            <>
+              <ChevronRight className="h-3 w-3" />
+              <Link
+                href={`/shop?categoryId=${product.category.id}`}
+                className="hover:text-[#5C2E1A] transition-colors"
+              >
+                {product.category.name}
+              </Link>
+            </>
+          )}
+          <ChevronRight className="h-3 w-3" />
+          <span className="text-[#3D1A0A] font-medium line-clamp-1">{product.name}</span>
+        </nav>
+
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Gallery */}
           <div className="space-y-4">
@@ -270,6 +305,35 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                   {r.title   && <h4 className="mt-3 font-medium text-[#3D1A0A]">{r.title}</h4>}
                   {r.comment && <p className="mt-1 text-sm text-[#5C2E1A]">{r.comment}</p>}
                 </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Related products */}
+        {relatedProducts.length > 0 && (
+          <section className="mt-20 border-t border-[#D6CCBF] pt-16">
+            <div className="flex items-end justify-between mb-8">
+              <div>
+                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#A0673A]">
+                  {product.category?.name}
+                </p>
+                <h2 className="mt-2 font-[family-name:var(--font-space-grotesk)] text-2xl font-bold text-[#1C0A04]">
+                  You May Also Like
+                </h2>
+              </div>
+              {product.category && (
+                <Link
+                  href={`/shop?categoryId=${product.category.id}`}
+                  className="hidden items-center gap-1.5 text-sm font-semibold text-[#5C2E1A] hover:text-[#3D1A0A] transition-colors sm:flex"
+                >
+                  View all <ChevronRight className="h-4 w-4" />
+                </Link>
+              )}
+            </div>
+            <div className="grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-4">
+              {relatedProducts.map((p) => (
+                <ProductCard key={p.id} product={p} />
               ))}
             </div>
           </section>

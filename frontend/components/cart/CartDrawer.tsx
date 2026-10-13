@@ -127,6 +127,30 @@ export default function CartDrawer() {
             {/* Footer */}
             {items.length > 0 && (
               <div className="border-t border-[#D6CCBF] px-6 py-4 space-y-4 bg-[#F7F3EE]">
+
+                {/* Free shipping progress */}
+                {subtotal < 999 && subtotal > 0 && (
+                  <div className="rounded-xl bg-white p-3 space-y-1.5 border border-[#EDE8E0]">
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-[#5C2E1A] font-medium">
+                        ₹{(999 - subtotal).toFixed(0)} away from free shipping
+                      </span>
+                      <span className="text-[#A0673A]">{Math.round((subtotal / 999) * 100)}%</span>
+                    </div>
+                    <div className="h-1.5 w-full rounded-full bg-[#EDE8E0]">
+                      <div
+                        className="h-1.5 rounded-full bg-[#C4956A] transition-all duration-500"
+                        style={{ width: `${Math.min((subtotal / 999) * 100, 100)}%` }}
+                      />
+                    </div>
+                  </div>
+                )}
+                {subtotal >= 999 && (
+                  <div className="rounded-xl bg-emerald-50 p-2.5 text-xs text-emerald-700 font-medium text-center">
+                    🎉 Free shipping unlocked!
+                  </div>
+                )}
+
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-[#A0673A]">Subtotal</span>
@@ -141,12 +165,12 @@ export default function CartDrawer() {
                   <div className="flex justify-between border-t border-[#D6CCBF] pt-2 text-base font-semibold text-[#3D1A0A]">
                     <span>Total</span>
                     <span>₹{total.toLocaleString()}</span>
-                  </div>         
+                  </div>
                 </div>
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="flex w-full items-center justify-center rounded-full bg-[#5C2E1A] px-6 py-3.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors">
+                  className="flex w-full items-center justify-center rounded-full bg-[#5C2E1A] px-6 py-3.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors hover:shadow-lg hover:shadow-[#5C2E1A]/20">
                   {isLoading ? <Spinner size="sm" className="text-[#F7F3EE]" /> : "Checkout"}
                 </Link>
                 <Link

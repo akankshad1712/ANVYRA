@@ -96,8 +96,33 @@ export default function CartPage() {
           </div>
 
           {/* Order summary */}
-          <div className="rounded-2xl border border-[#D6CCBF] bg-white p-6 h-fit space-y-4">
+          <div className="rounded-2xl border border-[#D6CCBF] bg-white p-6 h-fit space-y-4 sticky top-24">
             <h2 className="font-semibold text-lg text-[#1C0A04]">Order Summary</h2>
+
+            {/* Free shipping progress */}
+            {subtotal < 999 && subtotal > 0 && (
+              <div className="rounded-xl bg-[#F7F3EE] p-3 space-y-2">
+                <div className="flex items-center justify-between text-xs">
+                  <span className="text-[#5C2E1A] font-medium">
+                    Add ₹{(999 - subtotal).toFixed(0)} more for free shipping
+                  </span>
+                  <span className="text-[#A0673A]">{Math.round((subtotal / 999) * 100)}%</span>
+                </div>
+                <div className="h-1.5 w-full rounded-full bg-[#EDE8E0]">
+                  <div
+                    className="h-1.5 rounded-full bg-[#C4956A] transition-all duration-500"
+                    style={{ width: `${Math.min((subtotal / 999) * 100, 100)}%` }}
+                  />
+                </div>
+              </div>
+            )}
+            {subtotal >= 999 && (
+              <div className="flex items-center gap-2 rounded-xl bg-emerald-50 p-3 text-xs text-emerald-700 font-medium">
+                <Truck className="h-3.5 w-3.5" />
+                🎉 You've unlocked free shipping!
+              </div>
+            )}
+
             <div className="space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-[#A0673A]">Subtotal ({cart?.totalItems} items)</span>
@@ -109,12 +134,6 @@ export default function CartPage() {
                   {shipping === 0 ? "Free" : `₹${shipping}`}
                 </span>
               </div>
-              {shipping > 0 && (
-                <p className="text-xs text-[#A0673A] flex items-center gap-1">
-                  <Truck className="h-3 w-3" />
-                  Add ₹{(999 - subtotal).toFixed(0)} more for free shipping
-                </p>
-              )}
               <div className="border-t border-[#D6CCBF] pt-3 flex justify-between font-bold text-base text-[#1C0A04]">
                 <span>Total</span>
                 <span>₹{total.toLocaleString()}</span>
@@ -122,7 +141,7 @@ export default function CartPage() {
             </div>
             <Link
               href="/checkout"
-              className="block w-full rounded-full bg-[#5C2E1A] py-3.5 text-center font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors"
+              className="block w-full rounded-full bg-[#5C2E1A] py-3.5 text-center font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] transition-colors hover:shadow-lg hover:shadow-[#5C2E1A]/20"
             >
               Proceed to Checkout
             </Link>
