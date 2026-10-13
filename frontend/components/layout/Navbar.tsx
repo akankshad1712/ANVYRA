@@ -43,17 +43,19 @@ export default function Navbar() {
     staleTime: 5 * 60 * 1000, // 5 min cache
   });
 
-  // Build nav links: real DB categories first, then static
+  // Build nav links: real DB categories first
   // Only after mount to avoid hydration mismatch (categories come from API)
   const navLinks = mounted
-    ? [
-        ...categories.map((cat) => ({
-          label: cat.name,
-          href: `/shop?categoryId=${cat.id}`,
-          sub: [] as string[],
-        })),
-        ...STATIC_NAV,
-      ]
+    ? categories.length > 0
+      ? [
+          ...categories.map((cat) => ({
+            label: cat.name,
+            href: `/shop?categoryId=${cat.id}`,
+            sub: [] as string[],
+          })),
+          { label: "All Products", href: "/shop", sub: [] as string[] },
+        ]
+      : STATIC_NAV
     : STATIC_NAV;
 
   useEffect(() => { setMounted(true); }, []);
@@ -321,7 +323,7 @@ export default function Navbar() {
                 </div>
 
                 <p className="pt-6 text-center text-xs tracking-[0.2em] text-[#C4956A] uppercase">
-                  Style Meets You
+                  Dress the Story
                 </p>
               </div>
             </motion.div>

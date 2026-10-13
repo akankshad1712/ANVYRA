@@ -5,12 +5,12 @@ import Image from "next/image";
 import { Globe, Share2, Rss } from "lucide-react";
 
 const SHOP_LINKS = [
-  { label: "Men",          href: "/shop?category=men" },
-  { label: "Women",        href: "/shop?category=women" },
-  { label: "Shoes",        href: "/shop?category=shoes" },
-  { label: "Accessories",  href: "/shop?category=accessories" },
-  { label: "New Arrivals", href: "/shop?sort=newest" },
-  { label: "Best Sellers", href: "/shop?sort=popular" },
+  { label: "Jackets",           href: "/shop?categoryId=1" },
+  { label: "Oversized T-Shirts",href: "/shop?categoryId=2" },
+  { label: "Shirts",            href: "/shop?categoryId=3" },
+  { label: "Trousers",          href: "/shop?categoryId=4" },
+  { label: "Straight-fit Jeans",href: "/shop?categoryId=5" },
+  { label: "New Arrivals",      href: "/shop?sort=newest"  },
 ];
 
 const COMPANY_LINKS = [
