@@ -48,11 +48,11 @@ export default function Footer() {
             </Link>
             {/* Tagline */}
             <p className="mt-3 text-xs font-semibold uppercase tracking-[0.3em] text-[#C4956A]">
-              Style Meets You
+              Dress the Story
             </p>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-[#C4956A]/70">
-              Premium fashion and lifestyle crafted for people who value timeless
-              design, quality, and enduring confidence.
+              Premium Indian fashion founded by Akanksha Deshmukh. Built for
+              those who wear their story with intention.
             </p>
             <div className="mt-6 flex gap-3">
               {[

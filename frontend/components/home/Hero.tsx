@@ -11,7 +11,7 @@ export default function Hero() {
       {/* Background image */}
       <Image
         src="/hero/hero-desktop.png"
-        alt="ANVYRA — Style Meets You"
+        alt="ANVYRA — Dress the Story"
         fill
         priority
         className="object-cover"
@@ -31,10 +31,10 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-xs font-semibold uppercase tracking-[0.4em] text-[#C4956A]"
             >
-              Style Meets You
+              Dress the Story
             </motion.p>
 
-            {/* Logo mark as wordmark on hero */}
+            {/* Logo wordmark */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -51,36 +51,46 @@ export default function Hero() {
               />
             </motion.div>
 
+            {/* Tagline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              className="mt-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#C4956A]/80"
+            >
+              Founded by Akanksha Deshmukh · Pune, 2025
+            </motion.p>
+
             {/* Subheading */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.45 }}
-              className="mt-6 max-w-lg text-lg leading-relaxed text-[#F7F3EE]/80"
+              transition={{ duration: 0.6, delay: 0.52 }}
+              className="mt-5 max-w-lg text-lg leading-relaxed text-[#F7F3EE]/80"
             >
-              Luxury fashion crafted for people who value timeless design,
-              premium quality, and enduring confidence.
+              Premium Indian fashion crafted for those who wear their identity
+              with intention. Every piece built for legacy.
             </motion.p>
 
             {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              transition={{ duration: 0.6, delay: 0.65 }}
               className="mt-10 flex flex-wrap gap-4"
             >
               <Link
                 href="/shop"
-                className="group flex items-center gap-2 rounded-full bg-[#C4956A] px-8 py-4 font-semibold text-[#1C0A04] transition hover:bg-[#D4AF8C]"
+                className="group flex items-center gap-2 rounded-full bg-[#C4956A] px-8 py-4 font-semibold text-[#1C0A04] transition hover:bg-[#D4AF8C] hover:shadow-lg hover:shadow-[#C4956A]/30 hover:-translate-y-0.5"
               >
                 Shop Now
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               <Link
-                href="/shop?featured=true"
+                href="/about"
                 className="rounded-full border border-[#C4956A]/70 px-8 py-4 font-semibold text-[#F7F3EE] backdrop-blur-sm transition hover:border-[#C4956A] hover:bg-[#3D1A0A]/40"
               >
-                View Collections
+                Our Story
               </Link>
             </motion.div>
           </div>
