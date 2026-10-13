@@ -128,7 +128,7 @@ export default function RegisterPage() {
           transition={{ duration: 0.5, delay: 1 }}
           className="absolute bottom-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C4956A]/50"
         >
-          ANVYRA — Style Meets You
+          ANVYRA — Dress the Story
         </motion.p>
       </div>
 

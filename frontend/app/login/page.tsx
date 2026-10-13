@@ -79,7 +79,7 @@ export default function LoginPage() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-3xl font-bold font-[family-name:var(--font-space-grotesk)] text-[#F7F3EE] leading-tight"
           >
-            Style Meets You.
+            Dress the Story.
           </motion.p>
 
           <motion.p
@@ -88,7 +88,8 @@ export default function LoginPage() {
             transition={{ duration: 0.6, delay: 0.55 }}
             className="mt-4 text-base text-[#C4956A]/80 leading-relaxed max-w-xs"
           >
-            Premium fashion crafted for people who know exactly who they are.
+            Premium Indian fashion by Akanksha Deshmukh — built for those who
+            wear their story with intention.
           </motion.p>
 
           {/* Feature bullets */}
@@ -118,7 +119,7 @@ export default function LoginPage() {
           transition={{ duration: 0.5, delay: 1 }}
           className="absolute bottom-8 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C4956A]/50"
         >
-          ANVYRA — Built for legacy
+          ANVYRA — Dress the Story
         </motion.p>
       </div>
 
