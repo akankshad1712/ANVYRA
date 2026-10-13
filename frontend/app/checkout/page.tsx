@@ -28,6 +28,55 @@ const PAYMENT_METHODS: { value: PaymentMethod; label: string; desc: string; icon
   { value: "NET_BANKING", label: "Net Banking",         desc: "All major Indian banks",                    icon: "🏦" },
 ];
 
+// ── Coupon input component ────────────────────────────────────────────────────
+function CouponInput() {
+  const [code, setCode]       = useState("");
+  const [applied, setApplied] = useState(false);
+  const [error, setError]     = useState("");
+
+  const handleApply = () => {
+    if (!code.trim()) { setError("Please enter a promo code"); return; }
+    // Placeholder — connect to real coupon API when available
+    if (code.trim().toUpperCase() === "ANVYRA10") {
+      setApplied(true);
+      setError("");
+    } else {
+      setError("Invalid or expired promo code");
+      setApplied(false);
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      <div className="flex gap-2">
+        <input
+          value={code}
+          onChange={(e) => { setCode(e.target.value.toUpperCase()); setApplied(false); setError(""); }}
+          placeholder="Enter promo code"
+          className="flex-1 rounded-xl border border-[#D6CCBF] bg-[#F7F3EE] px-4 py-2.5 text-sm text-[#1C0A04] placeholder:text-[#A0673A]/40 focus:border-[#C4956A] focus:outline-none transition uppercase"
+        />
+        <button
+          type="button"
+          onClick={handleApply}
+          disabled={applied}
+          className="rounded-xl bg-[#5C2E1A] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3D1A0A] disabled:opacity-60 transition-colors"
+        >
+          {applied ? "Applied ✓" : "Apply"}
+        </button>
+      </div>
+      {applied && (
+        <p className="text-xs font-medium text-emerald-700 flex items-center gap-1">
+          🎉 Promo code applied! You'll save on this order.
+        </p>
+      )}
+      {error && (
+        <p className="text-xs text-red-600">{error}</p>
+      )}
+      <p className="text-[10px] text-[#A0673A]">Try ANVYRA10 for a discount</p>
+    </div>
+  );
+}
+
 export default function CheckoutPage() {
   const router = useRouter();
   const { cart }            = useCartStore();
@@ -331,6 +380,22 @@ export default function CheckoutPage() {
                   ⚠️ Online payment gateway requires configuration. Please use Cash on Delivery for now.
                 </motion.div>
               )}
+            </motion.section>
+
+            {/* ── Coupon / Promo code ────────────────────────────────── */}
+            <motion.section
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+              className="rounded-2xl border border-[#D6CCBF] bg-white p-6 shadow-sm"
+            >
+              <div className="flex items-center gap-2 mb-4">
+                <div className="flex h-8 w-8 items-center justify-center rounded-full bg-[#EDE8E0]">
+                  <span className="text-sm">🏷️</span>
+                </div>
+                <h2 className="font-semibold text-lg text-[#1C0A04]">Promo Code</h2>
+              </div>
+              <CouponInput />
             </motion.section>
 
             {/* Trust signals */}

@@ -13,11 +13,11 @@ import { PageLoader, Spinner } from "@/components/common/Loading";
 import Link from "next/link";
 import {
   User as UserIcon, MapPin, Package, Heart,
-  Plus, Trash2, CheckCircle, LogOut, Edit2, Phone, Mail,
+  Plus, Trash2, CheckCircle, LogOut, Edit2, Phone, Mail, Lock, Eye, EyeOff,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-type Tab = "profile" | "addresses";
+type Tab = "profile" | "addresses" | "password";
 
 export default function AccountPage() {
   const router = useRouter();
@@ -35,6 +35,18 @@ export default function AccountPage() {
     phoneNumber: user?.phoneNumber ?? "",
   });
   const [profileSaving, setProfileSaving] = useState(false);
+
+  // Password change state
+  const [passwordData, setPasswordData] = useState({ currentPassword: "", newPassword: "", confirmPassword: "" });
+  const [showCurrent,  setShowCurrent]  = useState(false);
+  const [showNew,      setShowNew]      = useState(false);
+  const [passwordSaving, setPasswordSaving] = useState(false);
+
+  // Inline add address state
+  const [showAddAddressForm, setShowAddAddressForm] = useState(false);
+  const [newAddressData, setNewAddressData] = useState({
+    fullName: "", phone: "", street: "", city: "", state: "", postalCode: "", country: "India", isDefault: false as boolean,
+  });
 
   useEffect(() => {
     if (user) {
@@ -65,6 +77,40 @@ export default function AccountPage() {
     router.push("/");
   };
 
+  const handlePasswordChange = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passwordData.newPassword !== passwordData.confirmPassword) {
+      showError("Passwords do not match"); return;
+    }
+    if (passwordData.newPassword.length < 8) {
+      showError("Password must be at least 8 characters"); return;
+    }
+    setPasswordSaving(true);
+    try {
+      await api.put("/users/me/password", {
+        currentPassword: passwordData.currentPassword,
+        newPassword: passwordData.newPassword,
+      });
+      success("Password updated successfully!");
+      setPasswordData({ currentPassword: "", newPassword: "", confirmPassword: "" });
+    } catch (err: any) {
+      showError(err.message ?? "Failed to update password");
+    } finally {
+      setPasswordSaving(false);
+    }
+  };
+
+  const createAddressMutation = useMutation({
+    mutationFn: addressesService.create,
+    onSuccess: () => {
+      success("Address added!");
+      setShowAddAddressForm(false);
+      setNewAddressData({ fullName: "", phone: "", street: "", city: "", state: "", postalCode: "", country: "India", isDefault: false });
+      refetchAddresses();
+    },
+    onError: (err: any) => showError(err.message ?? "Failed to add address"),
+  });
+
   const { data: addresses = [], refetch: refetchAddresses } = useQuery({
     queryKey: ["addresses"],
     queryFn: addressesService.getAll,
@@ -92,6 +138,7 @@ export default function AccountPage() {
   const TABS: { id: Tab; label: string; icon: React.ReactNode }[] = [
     { id: "profile",   label: "Profile",   icon: <UserIcon className="h-4 w-4" /> },
     { id: "addresses", label: "Addresses", icon: <MapPin   className="h-4 w-4" /> },
+    { id: "password",  label: "Password",  icon: <Lock     className="h-4 w-4" /> },
   ];
 
   const initials = `${user.firstName[0] ?? ""}${user.lastName[0] ?? ""}`.toUpperCase();
@@ -349,6 +396,174 @@ export default function AccountPage() {
                     ))}
                   </div>
                 )}
+
+                {/* Inline add address */}
+                <div className="mt-4">
+                  <button
+                    onClick={() => setShowAddAddressForm(!showAddAddressForm)}
+                    className="flex items-center gap-2 rounded-full border-2 border-dashed border-[#C4956A]/50 px-5 py-2.5 text-sm font-medium text-[#5C2E1A] hover:border-[#C4956A] hover:bg-[#FFF8F2] transition-colors w-full justify-center"
+                  >
+                    <Plus className="h-4 w-4" />
+                    {showAddAddressForm ? "Cancel" : "Add New Address"}
+                  </button>
+
+                  {showAddAddressForm && (
+                    <form
+                      onSubmit={(e) => { e.preventDefault(); createAddressMutation.mutate(newAddressData); }}
+                      className="mt-4 space-y-3 rounded-xl border border-[#D6CCBF] bg-[#F7F3EE] p-4"
+                    >
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">Full Name *</label>
+                          <input required value={newAddressData.fullName} placeholder="Full name"
+                            onChange={(e) => setNewAddressData({ ...newAddressData, fullName: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">Phone *</label>
+                          <input required value={newAddressData.phone} placeholder="10-digit number"
+                            onChange={(e) => setNewAddressData({ ...newAddressData, phone: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">Street *</label>
+                        <input required value={newAddressData.street} placeholder="House no., Street, Area"
+                          onChange={(e) => setNewAddressData({ ...newAddressData, street: e.target.value })}
+                          className={inputCls} />
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">City *</label>
+                          <input required value={newAddressData.city} placeholder="City"
+                            onChange={(e) => setNewAddressData({ ...newAddressData, city: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">State *</label>
+                          <input required value={newAddressData.state} placeholder="State"
+                            onChange={(e) => setNewAddressData({ ...newAddressData, state: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                      </div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">Pincode *</label>
+                          <input required value={newAddressData.postalCode} placeholder="6-digit pincode"
+                            onChange={(e) => setNewAddressData({ ...newAddressData, postalCode: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                        <div>
+                          <label className="block text-xs font-semibold text-[#5C2E1A] mb-1">Country</label>
+                          <input value={newAddressData.country}
+                            onChange={(e) => setNewAddressData({ ...newAddressData, country: e.target.value })}
+                            className={inputCls} />
+                        </div>
+                      </div>
+                      <label className="flex items-center gap-2 cursor-pointer select-none">
+                        <input type="checkbox" checked={newAddressData.isDefault}
+                          onChange={(e) => setNewAddressData({ ...newAddressData, isDefault: e.target.checked })}
+                          className="accent-[#C4956A] h-4 w-4" />
+                        <span className="text-sm text-[#5C2E1A]">Set as default address</span>
+                      </label>
+                      <button
+                        type="submit"
+                        disabled={createAddressMutation.isPending}
+                        className="rounded-full bg-[#5C2E1A] px-6 py-2.5 text-sm font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] disabled:opacity-50 transition-colors"
+                      >
+                        {createAddressMutation.isPending ? "Saving…" : "Save Address"}
+                      </button>
+                    </form>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Password tab */}
+            {tab === "password" && (
+              <div className="rounded-2xl border border-[#D6CCBF] bg-white p-6 shadow-sm">
+                <div className="flex items-center gap-2 mb-6">
+                  <Lock className="h-5 w-5 text-[#C4956A]" />
+                  <h2 className="font-semibold text-lg text-[#1C0A04]">Change Password</h2>
+                </div>
+
+                <form onSubmit={handlePasswordChange} className="space-y-4 max-w-md">
+                  {/* Current password */}
+                  <div>
+                    <label className={labelCls}>Current Password</label>
+                    <div className="relative">
+                      <input
+                        type={showCurrent ? "text" : "password"}
+                        required
+                        value={passwordData.currentPassword}
+                        onChange={(e) => setPasswordData({ ...passwordData, currentPassword: e.target.value })}
+                        placeholder="Enter current password"
+                        className={cn(inputCls, "pr-12")}
+                      />
+                      <button type="button" onClick={() => setShowCurrent(!showCurrent)}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-[#A0673A] hover:text-[#5C2E1A] transition-colors">
+                        {showCurrent ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* New password */}
+                  <div>
+                    <label className={labelCls}>New Password</label>
+                    <div className="relative">
+                      <input
+                        type={showNew ? "text" : "password"}
+                        required
+                        minLength={8}
+                        value={passwordData.newPassword}
+                        onChange={(e) => setPasswordData({ ...passwordData, newPassword: e.target.value })}
+                        placeholder="Min. 8 characters"
+                        className={cn(inputCls, "pr-12")}
+                      />
+                      <button type="button" onClick={() => setShowNew(!showNew)}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 text-[#A0673A] hover:text-[#5C2E1A] transition-colors">
+                        {showNew ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                      </button>
+                    </div>
+                    {passwordData.newPassword.length > 0 && (
+                      <div className="mt-1.5 flex gap-1">
+                        {[1,2,3,4].map((n) => (
+                          <div key={n} className={`h-1 flex-1 rounded-full transition-colors ${
+                            passwordData.newPassword.length >= n * 3
+                              ? passwordData.newPassword.length >= 12 ? "bg-emerald-500" : "bg-[#C4956A]"
+                              : "bg-[#D6CCBF]"
+                          }`} />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Confirm password */}
+                  <div>
+                    <label className={labelCls}>Confirm New Password</label>
+                    <input
+                      type="password"
+                      required
+                      value={passwordData.confirmPassword}
+                      onChange={(e) => setPasswordData({ ...passwordData, confirmPassword: e.target.value })}
+                      placeholder="Re-enter new password"
+                      className={inputCls}
+                    />
+                    {passwordData.confirmPassword && passwordData.newPassword !== passwordData.confirmPassword && (
+                      <p className="mt-1 text-xs text-red-600">Passwords do not match</p>
+                    )}
+                  </div>
+
+                  <div className="pt-2">
+                    <button
+                      type="submit"
+                      disabled={passwordSaving || (!!passwordData.confirmPassword && passwordData.newPassword !== passwordData.confirmPassword)}
+                      className="rounded-full bg-[#1C0A04] px-8 py-3 font-semibold text-[#F7F3EE] hover:bg-[#3D1A0A] disabled:opacity-50 transition-colors flex items-center gap-2"
+                    >
+                      {passwordSaving ? <><Spinner size="sm" className="text-[#F7F3EE]" /> Updating…</> : "Update Password"}
+                    </button>
+                  </div>
+                </form>
               </div>
             )}
           </motion.div>
