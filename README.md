@@ -1,63 +1,71 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,15,24,30&height=320&section=header&text=ANVYRA&fontSize=92&fontColor=C4956A&fontAlignY=42&desc=✦%20Dress%20The%20Story%20✦&descSize=20&descAlignY=66&descColor=E8B888&animation=twinkling&stroke=B98B5E&strokeWidth=2" width="100%"/>
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  ANVYRA · Premium Indian Fashion · Engineered solo · Live in production   -->
+<!--  README design system — champagne / graphite palette · Figma-inspired   -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,15,24,30&height=360&section=header&text=ANVYRA&fontSize=110&fontColor=C4956A&fontAlignY=44&desc=✦%20Dress%20The%20Story%20✦&descSize=22&descAlignY=68&descColor=E8B888&animation=twinkling&stroke=B98B5E&strokeWidth=2" width="100%"/>
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=3&section=header&reverso=false&text=&desc=" width="100%" alt="divider"/>
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-badge.png" width="88" alt="ANVYRA Badge"/>
+<img src="https://raw.githubusercontent.com/akankshad1712/ANVYRA/master/frontend/public/logos/anvyra-badge.png" width="96" alt="ANVYRA badge"/>
 
 <br/><br/>
 
-> ### *Premium Indian Fashion E-Commerce*
-> #### Founded & engineered by **Akanksha Deshmukh** — built from zero, deployed to production.
+<!-- LIVE STATUS PILL -->
+<p>
+  <img src="https://img.shields.io/badge/●%20LIVE-Production-C4956A?style=flat-square&labelColor=111111"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Built%20solo%20·%20end--to--end-Akanksha%20Deshmukh-E8B888?style=flat-square&labelColor=111111"/>
+  &nbsp;
+  <img src="https://img.shields.io/badge/Stack-Java%2021%20·%20Spring%20Boot%203.5%20·%20Next.js%2016-E8B888?style=flat-square&labelColor=111111"/>
+</p>
 
-<br/>
+<!-- TYPING TAGLINE -->
+<p>
+  <a href="https://github.com/akankshad1712/ANVYRA">
+    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=22&duration=2600&pause=600&color=C4956A&center=true&vCenter=true&random=false&width=640&lines=%E2%9C%A6+Premium+Indian+fashion+%E2%80%94+engineered+from+zero+%E2%9C%A6;Backend+%C2%B7+Frontend+%C2%B7+Data+%C2%B7+Cloud+%C2%B7+CI%2FCD;Zero+tutorials.+Zero+clones.+Built+for+legacy." alt="Typing SVG"/>
+  </a>
+</p>
 
+<!-- PRIMARY CTAs -->
 <a href="https://anvyra-klb2.vercel.app">
-<img src="https://img.shields.io/badge/◉%20LIVE%20DEMO-Visit%20Website-C4956A?style=for-the-badge&logo=vercel&logoColor=white&labelColor=111111"/>
-</a>
-&nbsp;
-<a href="https://anvyra.onrender.com/api">
-<img src="https://img.shields.io/badge/⚡%20BACKEND-REST%20API-00C7B7?style=for-the-badge&logo=render&logoColor=white&labelColor=111111"/>
+  <img src="https://img.shields.io/badge/◉%20LIVE%20STORE-Visit%20Website-C4956A?style=for-the-badge&logo=vercel&logoColor=white&labelColor=111111" alt="Live Store"/>
 </a>
 &nbsp;
 <a href="https://anvyra.onrender.com/swagger-ui/index.html">
-<img src="https://img.shields.io/badge/📖%20SWAGGER-API%20Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=111111"/>
-</a>
-
-<br/><br/>
-
-<a href="https://www.linkedin.com/in/akanksha-deshmukh-26210b244/">
-<img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111"/>
+  <img src="https://img.shields.io/badge/📖%20API%20DOCS-Swagger%20UI-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=111111" alt="Swagger"/>
 </a>
 &nbsp;
 <a href="https://github.com/akankshad1712/ANVYRA">
-<img src="https://img.shields.io/badge/GitHub-akankshad1712%2FANVYRA-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111"/>
+  <img src="https://img.shields.io/badge/SOURCE-akankshad1712%2FANVYRA-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111" alt="Source"/>
 </a>
 
 <br/><br/>
 
-<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social"/>
+<!-- SOCIAL PROOF -->
+<img src="https://img.shields.io/github/stars/akankshad1712/ANVYRA?style=social" alt="Stars"/>
 &nbsp;
-<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social"/>
+<img src="https://img.shields.io/github/forks/akankshad1712/ANVYRA?style=social" alt="Forks"/>
 &nbsp;
-<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social"/>
+<img src="https://img.shields.io/github/last-commit/akankshad1712/ANVYRA?style=social" alt="Last commit"/>
 
 </div>
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         THE BRAND                                          -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  THE BRAND                                                                -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>the_brand</samp>
+## ◈ &nbsp; <samp>the_brand</samp>
 
 </div>
 
@@ -73,7 +81,7 @@ Every line of code, every API endpoint, every pixel was crafted by **one person*
 
 > *"Built For Legacy."*
 
-Built with **Java 21**, **Spring Boot 3.5**, **Next.js 16**, **PostgreSQL**, **Redis**, **Docker**, and **GitHub Actions** — deployed on **Vercel + Render**.
+Engineered with **Java 21**, **Spring Boot 3.5**, **Next.js 16**, **PostgreSQL 18**, **Redis 7**, **Docker**, and **GitHub Actions** — deployed on **Vercel + Render**.
 
 </td>
 <td valign="top" align="center" width="42%">
@@ -100,36 +108,146 @@ Built with **Java 21**, **Spring Boot 3.5**, **Next.js 16**, **PostgreSQL**, **R
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         LIVE URLS                                          -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  DESIGN SYSTEM  ·  Figma-style color, type & spacing tokens                -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>live_urls</samp>
+## ◈ &nbsp; <samp>design_system</samp>
 
-| Service | URL | Status |
-|---|---|:---:|
-| 🛍️ **Frontend** | [anvyra-klb2.vercel.app](https://anvyra-klb2.vercel.app) | ![](https://img.shields.io/badge/status-live-00C851?style=flat-square) |
-| ⚙️ **Backend API** | [anvyra.onrender.com/api](https://anvyra.onrender.com/api) | ![](https://img.shields.io/badge/status-live-00C851?style=flat-square) |
-| 📖 **API Docs** | [Swagger UI](https://anvyra.onrender.com/swagger-ui/index.html) | ![](https://img.shields.io/badge/status-live-00C851?style=flat-square) |
-| 💻 **Source** | [akankshad1712/ANVYRA](https://github.com/akankshad1712/ANVYRA) | ![](https://img.shields.io/badge/visibility-public-0A66C2?style=flat-square) |
+<br/>
+<sub>A Figma-inspired token set — the visual language behind every screen of ANVYRA.</sub>
+
+</div>
+
+### ✦ Color Palette
+
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://colorhexa.com/c4956a.png" width="100%" height="64" alt="Champagne"/><br/>
+<sub><b>Champagne</b></sub><br/>
+<code>#C4956A</code><br/>
+<sub>primary · accent</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://colorhexa.com/e8b888.png" width="100%" height="64" alt="Soft Gold"/><br/>
+<sub><b>Soft Gold</b></sub><br/>
+<code>#E8B888</code><br/>
+<sub>secondary · text</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://colorhexa.com/b98b5e.png" width="100%" height="64" alt="Bronze"/><br/>
+<sub><b>Bronze</b></sub><br/>
+<code>#B98B5E</code><br/>
+<sub>stroke · divider</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://colorhexa.com/111111.png" width="100%" height="64" alt="Graphite"/><br/>
+<sub><b>Graphite</b></sub><br/>
+<code>#111111</code><br/>
+<sub>surface · label</sub>
+</td>
+<td align="center" width="20%">
+<img src="https://colorhexa.com/0d1117.png" width="100%" height="64" alt="Onyx"/><br/>
+<sub><b>Onyx</b></sub><br/>
+<code>#0D1117</code><br/>
+<sub>background</sub>
+</td>
+</tr>
+</table>
+
+### ✦ Typography Scale
+
+| Role | Family | Weight | Use |
+|:---:|---|:---:|---|
+| **Display** | Playfair Display | 700 | Brand mark · hero headlines |
+| **Heading** | DM Sans | 600 | Section titles · cards |
+| **Body** | DM Sans | 400 | Paragraphs · UI text |
+| **Mono** | JetBrains Mono | 500 | Code · tokens · labels |
+
+### ✦ Design Principles
+
+| ◈ | Principle | In practice |
+|:---:|---|---|
+| ✦ | **Editorial restraint** | Generous whitespace, serif display over sans body — the fashion-magazine feel |
+| ✦ | **Token-driven** | Colors, type, radius, shadows all live as design tokens, not one-off values |
+| ✦ | **Motion with intent** | Framer Motion used to guide attention, never to decorate |
+| ✦ | **Premium by default** | Hover swap on product cards, micro-interactions, soft shadows |
+
+<br/>
+
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  LIVE URLS  ·  BENTO GRID                                                 -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
+
+<div align="center">
+
+## ◈ &nbsp; <samp>live_urls</samp>
+
+<br/>
+
+<table>
+<tr>
+<td align="center" valign="middle" width="50%">
+
+<a href="https://anvyra-klb2.vercel.app"><b>🛍️ &nbsp; Frontend Store</b></a>
+<br/>
+<sub>Next.js 16 · Vercel Edge CDN</sub>
+<br/><br/>
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fanvyra-klb2.vercel.app&style=flat-square&label=anvyra-klb2.vercel.app&labelColor=111111&color=C4956A" alt="Frontend status"/>
+
+</td>
+<td align="center" valign="middle" width="50%">
+
+<a href="https://anvyra.onrender.com/api"><b>⚙️ &nbsp; Backend REST API</b></a>
+<br/>
+<sub>Spring Boot 3.5 · Render Docker</sub>
+<br/><br/>
+<img src="https://img.shields.io/website?url=https%3A%2F%2Fanvyra.onrender.com%2Fapi&style=flat-square&label=anvyra.onrender.com&labelColor=111111&color=C4956A" alt="Backend status"/>
+
+</td>
+</tr>
+<tr>
+<td align="center" valign="middle" width="50%">
+
+<a href="https://anvyra.onrender.com/swagger-ui/index.html"><b>📖 &nbsp; API Documentation</b></a>
+<br/>
+<sub>Swagger UI · OpenAPI 3</sub>
+<br/><br/>
+<img src="https://img.shields.io/badge/24-endpoints-85EA2D?style=flat-square&labelColor=111111" alt="Endpoints"/>
+
+</td>
+<td align="center" valign="middle" width="50%">
+
+<a href="https://github.com/akankshad1712/ANVYRA"><b>💻 &nbsp; Source Repository</b></a>
+<br/>
+<sub>Monorepo · frontend + backend</sub>
+<br/><br/>
+<img src="https://img.shields.io/badge/visibility-public-0A66C2?style=flat-square&labelColor=111111" alt="Visibility"/>
+
+</td>
+</tr>
+</table>
 
 </div>
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         ARCHITECTURE — 3D + Mermaid                        -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  ARCHITECTURE                                                             -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>architecture</samp>
+## ◈ &nbsp; <samp>architecture</samp>
 
 </div>
 
@@ -146,9 +264,7 @@ Built with **Java 21**, **Spring Boot 3.5**, **Next.js 16**, **PostgreSQL**, **R
                      ▝▀   ☁️  INFRASTRUCTURE   ·   Vercel · Render   ▘
 ```
 
-<br/>
-
-### ✦ System Architecture (Container View) — live diagram on GitHub
+### ✦ System Architecture — container view
 
 ```mermaid
 flowchart TB
@@ -179,9 +295,7 @@ flowchart TB
     style DATA fill:#0D1117,stroke:#C4956A,stroke-width:2px,color:#E8B888
 ```
 
-<br/>
-
-### ✦ Request Flow (Sequence) — live diagram on GitHub
+### ✦ Request Flow — sequence
 
 ```mermaid
 sequenceDiagram
@@ -206,9 +320,7 @@ sequenceDiagram
     V-->>U: rendered page (SSR/SSG)
 ```
 
-<br/>
-
-### ✦ Data Model (Entity Relationships) — live ER diagram on GitHub
+### ✦ Data Model — entity relationships
 
 ```mermaid
 erDiagram
@@ -226,8 +338,6 @@ erDiagram
     CART ||--o{ CART_ITEM : holds
 ```
 
-<br/>
-
 ### ✦ Architectural Decisions
 
 | Concern | Decision | Why |
@@ -244,45 +354,94 @@ erDiagram
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         TECH STACK                                         -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  FEATURES  ·  BENTO GRID                                                  -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>tech_stack</samp>
+## ◈ &nbsp; <samp>features</samp>
+
+<br/>
+<sub>A bento-grid view of everything ANVYRA ships — four pillars, one platform.</sub>
+
+<br/><br/>
+
+<table>
+<tr>
+<td align="left" valign="top" width="25%" bgcolor="111111">
+
+### 🛍️ &nbsp; Shopping
+<br/>
+✦ &nbsp; Product catalog<br/>
+✦ &nbsp; Category filters<br/>
+✦ &nbsp; Price range<br/>
+✦ &nbsp; Sort options<br/>
+✦ &nbsp; Product gallery<br/>
+✦ &nbsp; Size & color picker<br/>
+✦ &nbsp; Real-time search
+
+</td>
+<td align="left" valign="top" width="25%" bgcolor="111111">
+
+### 🔐 &nbsp; Auth
+<br/>
+✦ &nbsp; Register · Login<br/>
+✦ &nbsp; JWT access tokens<br/>
+✦ &nbsp; Refresh rotation<br/>
+✦ &nbsp; Redis invalidation<br/>
+✦ &nbsp; Protected routes<br/>
+✦ &nbsp; Admin role guard
+
+</td>
+<td align="left" valign="top" width="25%" bgcolor="111111">
+
+### 🛒 &nbsp; Cart & Orders
+<br/>
+✦ &nbsp; Persistent cart<br/>
+✦ &nbsp; Wishlist<br/>
+✦ &nbsp; Multi-step checkout<br/>
+✦ &nbsp; Address book<br/>
+✦ &nbsp; Order history<br/>
+✦ &nbsp; Status tracking
+
+</td>
+<td align="left" valign="top" width="25%" bgcolor="111111">
+
+### 🛠️ &nbsp; Admin
+<br/>
+✦ &nbsp; Live stats dashboard<br/>
+✦ &nbsp; Product CRUD<br/>
+✦ &nbsp; Category management<br/>
+✦ &nbsp; Order management<br/>
+✦ &nbsp; User management<br/>
+✦ &nbsp; Revenue analytics
+
+</td>
+</tr>
+</table>
+
+</div>
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=java,spring,hibernate,postgres,redis,react,nextjs,ts,tailwind,docker,githubactions,vercel,git,linux&theme=dark&perline=8" alt="Tech Stack Icons"/>
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  TECH STACK                                                               -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
+
+<div align="center">
+
+## ◈ &nbsp; <samp>tech_stack</samp>
 
 <br/>
 
-### ✦ 3D Isometric Tech Stack
+<img src="https://skillicons.dev/icons?i=java,spring,hibernate,postgres,redis,react,nextjs,ts,tailwind,docker,githubactions,vercel,git,linux&theme=dark&perline=8" alt="Tech stack icons"/>
 
-```
-                     ╱─────────────────────────────────────────╲
-                   ╱   🖥️  FRONTEND   ·   Next.js 16            ╲
-                 ╱      React 19 · TypeScript · Tailwind v4     ╲
-                ╱      Framer Motion · Zustand · TanStack Query   ╲
-               ╱─────────────────────────────────────────────────────╲
-             ╱   ⚙️  BACKEND   ·   Spring Boot 3.5 · Java 21         ╲
-           ╱      Spring Security · JWT · Hibernate 6 · Maven        ╲
-          ╱      REST API · DTOs · Repositories · Exception Handler   ╲
-         ╱─────────────────────────────────────────────────────────────────╲
-       ╱   💾  DATA   ·   PostgreSQL 18   +   Redis 7                         ╲
-      ╱       Primary Store            Cache · Token Store                    ╲
-     ╱───────────────────────────────────────────────────────────────────────────╲
-   ╱   ☁️  CLOUD & DEVOPS   ·   Vercel · Render · Docker · GitHub Actions          ╲
-  ╱       Edge CDN · Container · CI/CD · IaC (render.yaml · vercel.json)            ╲
- ╱─────────────────────────────────────────────────────────────────────────────────────╲
-```
-
-<br/>
-
-### ✦ Full Tech Table
+<br/><br/>
 
 | Layer | Technology | Version | Purpose |
 |:---:|---|:---:|---|
@@ -308,131 +467,17 @@ erDiagram
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         FEATURES                                          -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  PROJECT STRUCTURE                                                        -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>features</samp>
+## ◈ &nbsp; <samp>project_structure</samp>
 
 </div>
-
-### ✦ 3D Isometric Feature Tower
-
-```
-                     ╱─────────────────────────────────────────╲
-                   ╱   🛠️  ADMIN   ·   Management               ╲
-                 ╱      Dashboard · CRUD · Users · Revenue       ╲
-                ╱─────────────────────────────────────────────────╲
-              ╱   🛒  CART & ORDERS   ·   Checkout                   ╲
-            ╱      Wishlist · Multi-step · Address · Tracking       ╲
-           ╱───────────────────────────────────────────────────────────╲
-         ╱   🔐  AUTH   ·   Security                                     ╲
-       ╱      JWT · Refresh Rotation · Redis · RBAC · Protected        ╲
-      ╱────────────────────────────────────────────────────────────────────╲
-    ╱   🛍️  SHOPPING   ·   Catalog                                        ╲
-  ╱      Filters · Price · Sort · Search · Gallery · Size · Color         ╲
- ╱────────────────────────────────────────────────────────────────────────────╲
-```
-
-<br/>
-
-### ✦ Feature Breakdown
-
-<table>
-<tr>
-<td align="center" valign="top" width="25%">
-
-**🛍️ Shopping**
-<br/>
-Product catalog<br/>
-Category filters<br/>
-Price range<br/>
-Sort options<br/>
-Product gallery<br/>
-Size & color picker<br/>
-Real-time search
-
-</td>
-<td align="center" valign="top" width="25%">
-
-**🔐 Auth**
-<br/>
-Register · Login<br/>
-JWT access tokens<br/>
-Refresh rotation<br/>
-Redis invalidation<br/>
-Protected routes<br/>
-Admin role guard
-
-</td>
-<td align="center" valign="top" width="25%">
-
-**🛒 Cart & Orders**
-<br/>
-Persistent cart<br/>
-Wishlist<br/>
-Multi-step checkout<br/>
-Address book<br/>
-Order history<br/>
-Status tracking
-
-</td>
-<td align="center" valign="top" width="25%">
-
-**🛠️ Admin**
-<br/>
-Live stats dashboard<br/>
-Product CRUD<br/>
-Category management<br/>
-Order management<br/>
-User management<br/>
-Revenue analytics
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         PROJECT STRUCTURE — 3D + tree                      -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
-
-<div align="center">
-
-## &nbsp;◈&nbsp; <samp>project_structure — 3D view</samp>
-
-</div>
-
-### ✦ 3D Isometric Module Map
-
-```
-                     ╱─────────────────────────────────────────╲
-                   ╱   🖥️  FRONTEND   ·   Next.js 16            ╲
-                 ╱      app · components · services               ╲
-                ╱      store · lib · types · styles                ╲
-               ╱─────────────────────────────────────────────────────╲
-             ╱   ⚙️  BACKEND   ·   Spring Boot 3.5 · Java 21         ╲
-           ╱      controller · service · repository                    ╲
-          ╱      entity · dto · security · config · exception           ╲
-         ╱─────────────────────────────────────────────────────────────────╲
-       ╱   💾  DATA   ·   PostgreSQL 18   +   Redis 7                         ╲
-      ╱       (Render Managed DB)        (Upstash · TLS)                      ╲
-     ╱───────────────────────────────────────────────────────────────────────────╲
-   ╱   ☁️  INFRASTRUCTURE   ·   Vercel · Render · Docker · GitHub Actions          ╲
-  ╱       render.yaml · vercel.json · docker-compose.yml · scripts/seed.sql        ╲
- ╱─────────────────────────────────────────────────────────────────────────────────────╲
-```
-
-<br/>
-
-### ✦ Detailed File Tree
 
 ```
 ANVYRA/
@@ -468,15 +513,15 @@ ANVYRA/
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         API REFERENCE                                      -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  API REFERENCE                                                            -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>api_reference</samp>
+## ◈ &nbsp; <samp>api_reference</samp>
 
 </div>
 
@@ -520,37 +565,17 @@ ANVYRA/
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         QUICK START                                        -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  QUICK START                                                              -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>quick_start</samp>
+## ◈ &nbsp; <samp>quick_start</samp>
 
 </div>
-
-### ✦ 3D Isometric Deployment Flow
-
-```
-                     ╱─────────────────────────────────────────╲
-                   ╱   🚀  DEPLOY   ·   Live in Production        ╲
-                 ╱      Vercel (Frontend) · Render (Backend)      ╲
-                ╱─────────────────────────────────────────────────╲
-              ╱   🔧  BUILD   ·   Containerize                      ╲
-            ╱      Docker · Maven · Next.js build                  ╲
-           ╱───────────────────────────────────────────────────────────╲
-         ╱   🧪  TEST   ·   Continuous Integration                    ╲
-       ╱      GitHub Actions · Lint · Build verification              ╲
-      ╱────────────────────────────────────────────────────────────────────╲
-    ╱   ⬇️  SETUP   ·   Local Environment                                ╲
-  ╱      git clone · .env · seed.sql · docker compose up                ╲
- ╱────────────────────────────────────────────────────────────────────────────╲
-```
-
-<br/>
 
 ### 🐳 &nbsp; Docker
 
@@ -584,15 +609,15 @@ npm install && npm run dev
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         ENVIRONMENT VARIABLES                              -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  ENVIRONMENT VARIABLES                                                     -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>environment_variables</samp>
+## ◈ &nbsp; <samp>environment_variables</samp>
 
 | Scope | Variable | Purpose |
 |:---:|---|---|
@@ -608,15 +633,15 @@ npm install && npm run dev
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         THE FOUNDER                                        -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  THE FOUNDER                                                              -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-## &nbsp;◈&nbsp; <samp>the_founder</samp>
+## ◈ &nbsp; <samp>the_founder</samp>
 
 ```
 ╔════════════════════════════════════════════════════════════════╗
@@ -641,20 +666,20 @@ npm install && npm run dev
 <br/>
 
 <a href="https://www.linkedin.com/in/akanksha-deshmukh-26210b244/">
-<img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111"/>
+  <img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111" alt="LinkedIn"/>
 </a>
 &nbsp;
 <a href="https://github.com/akankshad1712">
-<img src="https://img.shields.io/badge/GitHub-akankshad1712-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111"/>
+  <img src="https://img.shields.io/badge/GitHub-akankshad1712-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111" alt="GitHub"/>
 </a>
 
 </div>
 
 <br/>
 
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
-<!--                         FOOTER                                             -->
-<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
+<!--  FOOTER                                                                   -->
+<!-- ════════════════════════════════════════════════════════════════════════ -->
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
@@ -670,10 +695,10 @@ npm install && npm run dev
 
 <br/><br/>
 
-<img src="https://img.shields.io/badge/Project-ANVYRA-C4956A?style=flat-square&labelColor=111111"/>
+<img src="https://img.shields.io/badge/Project-ANVYRA-C4956A?style=flat-square&labelColor=111111" alt="Project"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Status-Live%20in%20production-00C851?style=flat-square&labelColor=111111"/>
+<img src="https://img.shields.io/badge/Status-Live%20in%20production-00C851?style=flat-square&labelColor=111111" alt="Status"/>
 &nbsp;
-<img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%20%26%20code-C4956A?style=flat-square&labelColor=111111"/>
+<img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%20%26%20code-C4956A?style=flat-square&labelColor=111111" alt="Made with"/>
 
 </div>
