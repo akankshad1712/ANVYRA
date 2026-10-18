@@ -258,7 +258,31 @@ erDiagram
 
 <img src="https://skillicons.dev/icons?i=java,spring,hibernate,postgres,redis,react,nextjs,ts,tailwind,docker,githubactions,vercel,git,linux&theme=dark&perline=8" alt="Tech Stack Icons"/>
 
-<br/><br/>
+<br/>
+
+### ✦ 3D Isometric Tech Stack
+
+```
+                     ╱─────────────────────────────────────────╲
+                   ╱   🖥️  FRONTEND   ·   Next.js 16            ╲
+                 ╱      React 19 · TypeScript · Tailwind v4     ╲
+                ╱      Framer Motion · Zustand · TanStack Query   ╲
+               ╱─────────────────────────────────────────────────────╲
+             ╱   ⚙️  BACKEND   ·   Spring Boot 3.5 · Java 21         ╲
+           ╱      Spring Security · JWT · Hibernate 6 · Maven        ╲
+          ╱      REST API · DTOs · Repositories · Exception Handler   ╲
+         ╱─────────────────────────────────────────────────────────────────╲
+       ╱   💾  DATA   ·   PostgreSQL 18   +   Redis 7                         ╲
+      ╱       Primary Store            Cache · Token Store                    ╲
+     ╱───────────────────────────────────────────────────────────────────────────╲
+   ╱   ☁️  CLOUD & DEVOPS   ·   Vercel · Render · Docker · GitHub Actions          ╲
+  ╱       Edge CDN · Container · CI/CD · IaC (render.yaml · vercel.json)            ╲
+ ╱─────────────────────────────────────────────────────────────────────────────────────╲
+```
+
+<br/>
+
+### ✦ Full Tech Table
 
 | Layer | Technology | Version | Purpose |
 |:---:|---|:---:|---|
@@ -295,6 +319,28 @@ erDiagram
 ## &nbsp;◈&nbsp; <samp>features</samp>
 
 </div>
+
+### ✦ 3D Isometric Feature Tower
+
+```
+                     ╱─────────────────────────────────────────╲
+                   ╱   🛠️  ADMIN   ·   Management               ╲
+                 ╱      Dashboard · CRUD · Users · Revenue       ╲
+                ╱─────────────────────────────────────────────────╲
+              ╱   🛒  CART & ORDERS   ·   Checkout                   ╲
+            ╱      Wishlist · Multi-step · Address · Tracking       ╲
+           ╱───────────────────────────────────────────────────────────╲
+         ╱   🔐  AUTH   ·   Security                                     ╲
+       ╱      JWT · Refresh Rotation · Redis · RBAC · Protected        ╲
+      ╱────────────────────────────────────────────────────────────────────╲
+    ╱   🛍️  SHOPPING   ·   Catalog                                        ╲
+  ╱      Filters · Price · Sort · Search · Gallery · Size · Color         ╲
+ ╱────────────────────────────────────────────────────────────────────────────╲
+```
+
+<br/>
+
+### ✦ Feature Breakdown
 
 <table>
 <tr>
@@ -485,6 +531,26 @@ ANVYRA/
 ## &nbsp;◈&nbsp; <samp>quick_start</samp>
 
 </div>
+
+### ✦ 3D Isometric Deployment Flow
+
+```
+                     ╱─────────────────────────────────────────╲
+                   ╱   🚀  DEPLOY   ·   Live in Production        ╲
+                 ╱      Vercel (Frontend) · Render (Backend)      ╲
+                ╱─────────────────────────────────────────────────╲
+              ╱   🔧  BUILD   ·   Containerize                      ╲
+            ╱      Docker · Maven · Next.js build                  ╲
+           ╱───────────────────────────────────────────────────────────╲
+         ╱   🧪  TEST   ·   Continuous Integration                    ╲
+       ╱      GitHub Actions · Lint · Build verification              ╲
+      ╱────────────────────────────────────────────────────────────────────╲
+    ╱   ⬇️  SETUP   ·   Local Environment                                ╲
+  ╱      git clone · .env · seed.sql · docker compose up                ╲
+ ╱────────────────────────────────────────────────────────────────────────────╲
+```
+
+<br/>
 
 ### 🐳 &nbsp; Docker
 
