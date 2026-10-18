@@ -1,6 +1,8 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=260&section=header&text=ANVYRA&fontSize=96&fontColor=C4956A&fontAlignY=42&desc=✦%20Dress%20The%20Story%20✦&descSize=20&descAlignY=65&descColor=ffffff&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,15,24,30&height=320&section=header&text=ANVYRA&fontSize=92&fontColor=C4956A&fontAlignY=42&desc=✦%20Dress%20The%20Story%20✦&descSize=20&descAlignY=66&descColor=E8B888&animation=twinkling&stroke=B98B5E&strokeWidth=2" width="100%"/>
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=3&section=header&reverso=false&text=&desc=" width="100%" alt="divider"/>
 
 <br/>
 
@@ -25,7 +27,7 @@
 <img src="https://img.shields.io/badge/📖%20SWAGGER-API%20Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black&labelColor=111111"/>
 </a>
 
-<br/>
+<br/><br/>
 
 <a href="https://www.linkedin.com/in/akanksha-deshmukh-26210b244/">
 <img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111"/>
@@ -34,20 +36,6 @@
 <a href="https://github.com/akankshad1712/ANVYRA">
 <img src="https://img.shields.io/badge/GitHub-akankshad1712%2FANVYRA-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111"/>
 </a>
-
-<br/><br/>
-
-<img src="https://img.shields.io/badge/Next.js_16-000?style=flat-square&logo=nextdotjs&logoColor=white"/>
-<img src="https://img.shields.io/badge/React_19-61DAFB?style=flat-square&logo=react&logoColor=black"/>
-<img src="https://img.shields.io/badge/TypeScript_5-3178C6?style=flat-square&logo=typescript&logoColor=white"/>
-<img src="https://img.shields.io/badge/Tailwind_v4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white"/>
-<img src="https://img.shields.io/badge/Spring_Boot_3.5-6DB33F?style=flat-square&logo=springboot&logoColor=white"/>
-<img src="https://img.shields.io/badge/Java_21-ED8B00?style=flat-square&logo=openjdk&logoColor=white"/>
-<img src="https://img.shields.io/badge/PostgreSQL_18-4169E1?style=flat-square&logo=postgresql&logoColor=white"/>
-<img src="https://img.shields.io/badge/Redis_7-DC382D?style=flat-square&logo=redis&logoColor=white"/>
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white"/>
-<img src="https://img.shields.io/badge/Vercel-000?style=flat-square&logo=vercel&logoColor=white"/>
-<img src="https://img.shields.io/badge/Render-46E3B7?style=flat-square&logo=render&logoColor=black"/>
 
 <br/><br/>
 
@@ -61,40 +49,49 @@
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         THE BRAND                                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
-## ◈ &nbsp; The Brand
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>the_brand</samp>
+
+</div>
 
 <table>
 <tr>
-<td valign="top" width="68%">
+<td valign="top" width="58%">
 
-**ANVYRA** is a real premium Indian fashion brand — not a tutorial, not a clone.
+### ✦ ANVYRA — Premium Indian Fashion
+
+**ANVYRA** is a real premium fashion brand — not a tutorial, not a clone.
 
 Every line of code, every API endpoint, every pixel was crafted by **one person** — founder and full stack engineer **Akanksha Deshmukh**. From brand identity to cloud infrastructure, this is a production-grade platform that is live on the internet right now.
 
-Built with Java 21, Spring Boot 3.5, Next.js 16, PostgreSQL, Redis, Docker, GitHub Actions — and deployed on Vercel + Render.
-
 > *"Built For Legacy."*
 
+Built with **Java 21**, **Spring Boot 3.5**, **Next.js 16**, **PostgreSQL**, **Redis**, **Docker**, and **GitHub Actions** — deployed on **Vercel + Render**.
+
 </td>
-<td valign="top" align="center" width="32%">
+<td valign="top" align="center" width="42%">
 
 ```
-╔═══════════════════╗
-║                   ║
-║   A N V Y R A     ║
-║   ───────────     ║
-║   🛍️  Fashion      ║
-║   ⚙️  Full Stack   ║
-║   ☁️  Cloud Native ║
-║   🔐  JWT Secured  ║
-║   ⚡  Redis Cache  ║
-║   🐳  Docker Ready ║
-║                   ║
-╚═══════════════════╝
+╔══════════════════════════╗
+║                          ║
+║     A N V Y R A          ║
+║    ────────────────     ║
+║   🛍️  Fashion            ║
+║   ⚙️  Full Stack         ║
+║   ☁️  Cloud Native       ║
+║   🔐  JWT Secured        ║
+║   ⚡  Redis Cache        ║
+║   🐳  Docker Ready       ║
+║   🚀  Live in Prod       ║
+║                          ║
+╚══════════════════════════╝
 ```
 
 </td>
@@ -103,13 +100,15 @@ Built with Java 21, Spring Boot 3.5, Next.js 16, PostgreSQL, Redis, Docker, GitH
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         LIVE URLS                                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
-
-## ◈ &nbsp; Live URLs
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
+
+## &nbsp;◈&nbsp; <samp>live_urls</samp>
 
 | Service | URL | Status |
 |---|---|:---:|
@@ -122,51 +121,144 @@ Built with Java 21, Spring Boot 3.5, Next.js 16, PostgreSQL, Redis, Docker, GitH
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         ARCHITECTURE — 3D + Mermaid                        -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
-
-## ◈ &nbsp; Architecture
-
-```
-┌──────────────────────────────────────────────────────────────────────┐
-│                        ANVYRA  PLATFORM                              │
-├──────────────────────────────────────────────────────────────────────┤
-│                                                                      │
-│   👤  USER  ( Browser · Mobile · Tablet )                            │
-│         │                                                            │
-│         │  HTTPS                                                     │
-│         ▼                                                            │
-│  ┌────────────────────────────────────────────────────────────────┐  │
-│  │                  VERCEL  ·  Global Edge CDN                    │  │
-│  │  Next.js 16 · React 19 · TypeScript · Tailwind v4             │  │
-│  │  Zustand · TanStack Query · Framer Motion                     │  │
-│  └──────────────────────────────┬─────────────────────────────────┘  │
-│                                 │  REST / JSON                       │
-│                                 ▼                                    │
-│  ┌────────────────────────────────────────────────────────────────┐  │
-│  │               RENDER  ·  Docker Container                     │  │
-│  │  Spring Boot 3.5 · Java 21 · Spring Security · Hibernate 6    │  │
-│  │  JWT Auth · Refresh Tokens · Actuator                         │  │
-│  └────────────────┬────────────────────────┬───────────────────────┘  │
-│                   │                        │                         │
-│  ┌────────────────▼──────────┐  ┌──────────▼────────────────────┐   │
-│  │   PostgreSQL 18            │  │   Redis 7  (Upstash · TLS)   │   │
-│  │   Render Managed DB        │  │   Token Store · API Cache    │   │
-│  └───────────────────────────┘  └──────────────────────────────┘   │
-│                                                                      │
-└──────────────────────────────────────────────────────────────────────┘
-```
-
-<br/>
-
----
-
-<br/>
-
-## ◈ &nbsp; Tech Stack
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
+
+## &nbsp;◈&nbsp; <samp>architecture</samp>
+
+</div>
+
+### ✦ 3D Isometric Layer Stack
+
+```
+      ▗▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▖
+      ▝▀   🖥️  PRESENTATION   ·   Next.js 16 · React 19 · Tailwind v4   ▘
+           ▗▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▖
+           ▝▀   ⚙️  APPLICATION   ·   Spring Boot 3.5 · Java 21 · JWT   ▘
+                ▗▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▖
+                ▝▀   💾  DATA   ·   PostgreSQL 18 · Redis 7 (Upstash)   ▘
+                     ▗▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▖
+                     ▝▀   ☁️  INFRASTRUCTURE   ·   Vercel · Render   ▘
+```
+
+<br/>
+
+### ✦ System Architecture (Container View) — live diagram on GitHub
+
+```mermaid
+flowchart TB
+    subgraph CLIENT["🧑 Client Layer"]
+        U["Browser · Mobile · Tablet"]
+    end
+    subgraph EDGE["⚡ Vercel Edge CDN"]
+        FE["Next.js 16<br/>React 19 · TypeScript<br/>Tailwind v4 · Framer Motion"]
+    end
+    subgraph APP["⚙️ Render · Docker Container"]
+        SEC["Spring Security<br/>JWT · Refresh Rotation"]
+        API["Spring Boot 3.5<br/>Java 21 · Hibernate 6"]
+        SEC --> API
+    end
+    subgraph DATA["💾 Data Layer"]
+        PG[("PostgreSQL 18<br/>Render Managed")]
+        RD[("Redis 7<br/>Upstash · TLS")]
+    end
+
+    U -->|HTTPS| FE
+    FE -->|REST + JWT| SEC
+    API -->|JDBC · TLS| PG
+    API -->|cache · tokens| RD
+
+    style CLIENT fill:#111111,stroke:#C4956A,stroke-width:2px,color:#E8B888
+    style EDGE fill:#0D1117,stroke:#C4956A,stroke-width:2px,color:#E8B888
+    style APP fill:#111111,stroke:#C4956A,stroke-width:2px,color:#E8B888
+    style DATA fill:#0D1117,stroke:#C4956A,stroke-width:2px,color:#E8B888
+```
+
+<br/>
+
+### ✦ Request Flow (Sequence) — live diagram on GitHub
+
+```mermaid
+sequenceDiagram
+    autonumber
+    participant U as 🧑 Browser
+    participant V as ⚡ Vercel Edge
+    participant A as ⚙️ Spring Boot API
+    participant R as 💾 Redis
+    participant D as 💾 PostgreSQL
+
+    U->>V: HTTPS request
+    V->>A: REST + JWT
+    A->>R: validate token / check cache
+    alt cache hit
+        R-->>A: cached payload
+    else cache miss
+        A->>D: JPA repository query
+        D-->>A: result rows
+        A->>R: store in cache (TTL)
+    end
+    A-->>V: JSON response
+    V-->>U: rendered page (SSR/SSG)
+```
+
+<br/>
+
+### ✦ Data Model (Entity Relationships) — live ER diagram on GitHub
+
+```mermaid
+erDiagram
+    USER ||--o{ ORDER : places
+    USER ||--o{ ADDRESS : has
+    USER ||--o{ REVIEW : writes
+    USER ||--o| CART : owns
+    USER ||--o{ WISHLIST : saves
+    CATEGORY ||--o{ PRODUCT : contains
+    PRODUCT ||--o{ ORDER_ITEM : included-in
+    PRODUCT ||--o{ REVIEW : receives
+    PRODUCT ||--o{ WISHLIST : wished-in
+    ORDER ||--|{ ORDER_ITEM : contains
+    ORDER ||--o| PAYMENT : paid-by
+    CART ||--o{ CART_ITEM : holds
+```
+
+<br/>
+
+### ✦ Architectural Decisions
+
+| Concern | Decision | Why |
+|---|---|---|
+| **Frontend hosting** | Vercel Edge CDN | Global low-latency, auto CI/CD on push |
+| **Backend hosting** | Render Docker | Containerized, predictable, cheap scale |
+| **Auth** | JWT access + refresh rotation | Stateless, scalable, Redis-revocable |
+| **Token storage** | Redis (Upstash TLS) | Fast invalidation on logout, TTL-safe |
+| **Primary DB** | PostgreSQL 18 | Relational integrity for orders & payments |
+| **Caching** | Redis 7 | Offload reads, cache product lists & sessions |
+| **State (FE)** | Zustand + TanStack Query | Lightweight global + smart server state |
+| **Security** | Spring Security + RBAC | Role-based admin vs customer access |
+| **CI/CD** | GitHub Actions | Build → test → deploy on every push |
+
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         TECH STACK                                         -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
+
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>tech_stack</samp>
+
+<br/>
+
+<img src="https://skillicons.dev/icons?i=java,spring,hibernate,postgres,redis,react,nextjs,ts,tailwind,docker,githubactions,vercel,git,linux&theme=dark&perline=8" alt="Tech Stack Icons"/>
+
+<br/><br/>
 
 | Layer | Technology | Version | Purpose |
 |:---:|---|:---:|---|
@@ -192,13 +284,17 @@ Built with Java 21, Spring Boot 3.5, Next.js 16, PostgreSQL, Redis, Docker, GitH
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         FEATURES                                          -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
-
-## ◈ &nbsp; Features
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
+
+## &nbsp;◈&nbsp; <samp>features</samp>
+
+</div>
 
 <table>
 <tr>
@@ -254,15 +350,43 @@ Revenue analytics
 </tr>
 </table>
 
+<br/>
+
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         PROJECT STRUCTURE — 3D + tree                      -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
+
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>project_structure — 3D view</samp>
+
 </div>
 
+### ✦ 3D Isometric Module Map
+
+```
+                     ╱─────────────────────────────────────────╲
+                   ╱   🖥️  FRONTEND   ·   Next.js 16            ╲
+                 ╱      app · components · services               ╲
+                ╱      store · lib · types · styles                ╲
+               ╱─────────────────────────────────────────────────────╲
+             ╱   ⚙️  BACKEND   ·   Spring Boot 3.5 · Java 21         ╲
+           ╱      controller · service · repository                    ╲
+          ╱      entity · dto · security · config · exception           ╲
+         ╱─────────────────────────────────────────────────────────────────╲
+       ╱   💾  DATA   ·   PostgreSQL 18   +   Redis 7                         ╲
+      ╱       (Render Managed DB)        (Upstash · TLS)                      ╲
+     ╱───────────────────────────────────────────────────────────────────────────╲
+   ╱   ☁️  INFRASTRUCTURE   ·   Vercel · Render · Docker · GitHub Actions          ╲
+  ╱       render.yaml · vercel.json · docker-compose.yml · scripts/seed.sql        ╲
+ ╱─────────────────────────────────────────────────────────────────────────────────────╲
+```
+
 <br/>
 
----
-
-<br/>
-
-## ◈ &nbsp; Project Structure
+### ✦ Detailed File Tree
 
 ```
 ANVYRA/
@@ -298,14 +422,20 @@ ANVYRA/
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         API REFERENCE                                      -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
-## ◈ &nbsp; API Reference
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>api_reference</samp>
+
+</div>
 
 <details>
-<summary><b>▶ &nbsp; 24 Live Endpoints</b></summary>
+<summary><b>▶ &nbsp; 24 Live REST Endpoints</b></summary>
 
 <br/>
 
@@ -344,11 +474,17 @@ ANVYRA/
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         QUICK START                                        -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
-## ◈ &nbsp; Quick Start
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>quick_start</samp>
+
+</div>
 
 ### 🐳 &nbsp; Docker
 
@@ -382,11 +518,15 @@ npm install && npm run dev
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         ENVIRONMENT VARIABLES                              -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
 
-<br/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
-## ◈ &nbsp; Environment Variables
+<div align="center">
+
+## &nbsp;◈&nbsp; <samp>environment_variables</samp>
 
 | Scope | Variable | Purpose |
 |:---:|---|---|
@@ -398,15 +538,19 @@ npm install && npm run dev
 | BE | `CORS_ALLOWED_ORIGINS` | Allowed frontend origin |
 | FE | `NEXT_PUBLIC_API_URL` | Backend API base URL |
 
-<br/>
-
----
+</div>
 
 <br/>
 
-## ◈ &nbsp; The Founder
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         THE FOUNDER                                        -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
+
+## &nbsp;◈&nbsp; <samp>the_founder</samp>
 
 ```
 ╔════════════════════════════════════════════════════════════════╗
@@ -431,25 +575,39 @@ npm install && npm run dev
 <br/>
 
 <a href="https://www.linkedin.com/in/akanksha-deshmukh-26210b244/">
-<img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
+<img src="https://img.shields.io/badge/LinkedIn-Akanksha%20Deshmukh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=111111"/>
 </a>
 &nbsp;
 <a href="https://github.com/akankshad1712">
-<img src="https://img.shields.io/badge/GitHub-akankshad1712-181717?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-akankshad1712-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=111111"/>
 </a>
 
 </div>
 
 <br/>
 
----
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+<!--                         FOOTER                                             -->
+<!-- ═══════════════════════════════════════════════════════════════════════ -->
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=gradient&customColorList=12,14,15,24,30&height=2&section=header&text=&desc=" width="100%"/>
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,2,5,30&height=130&section=footer&text=Built%20For%20Legacy&fontSize=24&fontColor=C4956A&fontAlignY=62&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=venom&color=gradient&customColorList=12,14,15,24,30&height=180&section=footer&text=Built%20For%20Legacy&fontSize=30&fontColor=C4956A&fontAlignY=58&desc=✦%20Akanksha%20Deshmukh%20✦&descSize=14&descAlignY=78&descColor=E8B888&animation=twinkling" width="100%"/>
+
+<br/>
 
 *Crafted with ambition, precision, and zero shortcuts.*
 <br/>
 **— Akanksha Deshmukh, Founder of ANVYRA**
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/Project-ANVYRA-C4956A?style=flat-square&labelColor=111111"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Status-Live%20in%20production-00C851?style=flat-square&labelColor=111111"/>
+&nbsp;
+<img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%20%26%20code-C4956A?style=flat-square&labelColor=111111"/>
 
 </div>
